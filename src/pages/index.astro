@@ -63,7 +63,8 @@ const EAGER_COUNT = 8;
     position: sticky;
     top: 1.5rem;
     border: 1px solid var(--border);
-    background: var(--surface);
+    border-radius: var(--radius);
+    background: var(--cream);
     padding: 0.75rem 1rem 1rem;
   }
 
@@ -75,15 +76,26 @@ const EAGER_COUNT = 8;
   }
 
   .filters-head h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
     font-size: 0.95rem;
     margin: 0.5rem 0;
   }
 
   #clear-filters {
-    background: none;
+    background: var(--surface);
     border: 1px solid var(--border);
+    border-radius: var(--radius);
     padding: 0.2rem 0.5rem;
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: border-color 160ms ease-out;
+  }
+
+  #clear-filters:hover {
+    border-color: var(--reed-red);
   }
 
   fieldset {
@@ -94,10 +106,12 @@ const EAGER_COUNT = 8;
   }
 
   legend {
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--ink-muted);
+    letter-spacing: 0.1em;
+    color: var(--meta);
     padding: 0;
   }
 
@@ -111,8 +125,11 @@ const EAGER_COUNT = 8;
 
   .result-count {
     margin: 0 0 0.75rem;
-    color: var(--ink-muted);
-    font-size: 0.85rem;
+    color: var(--meta);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
   .grid {

@@ -1,5 +1,5 @@
 ---
-import { resizeImage, formatPrice, itemPath } from "../lib/products";
+import { resizeImage, formatPrice, itemPath, CATEGORY_BAND } from "../lib/products";
 import type { Product } from "../lib/products";
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 
 const { product, priority = false } = Astro.props;
 const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
+const band = CATEGORY_BAND[product.category];
 ---
 
 <a
@@ -16,7 +17,10 @@ const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : nul
   href={itemPath(product.id)}
   data-specifics={JSON.stringify(product.specifics)}
 >
-  <div class="card-image">
+  <div class="band" style={`background:${band.bg};color:${band.fg}`}>
+    {product.category}
+  </div>
+  <div class="window">
     {
       thumb && (
         <img
@@ -30,10 +34,10 @@ const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : nul
       )
     }
   </div>
-  <div class="card-body">
-    <p class="card-title">{product.title}</p>
-    <p class="card-price">{formatPrice(product.price, product.currency)}</p>
-    {product.condition && <p class="card-condition">{product.condition}</p>}
+  <div class="spec-strip">
+    {product.condition && <p class="meta">{product.condition}</p>}
+    <p class="title">{product.title}</p>
+    <p class="price">{formatPrice(product.price, product.currency)}</p>
   </div>
 </a>
 
@@ -43,49 +47,71 @@ const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : nul
     flex-direction: column;
     background: var(--surface);
     border: 1px solid var(--border);
+    border-radius: var(--radius);
     text-decoration: none;
     color: inherit;
     overflow: hidden;
+    transition: transform 160ms ease-out, border-color 160ms ease-out;
   }
 
-  .card-image {
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .band {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .window {
     aspect-ratio: 1 / 1;
-    background: #eaeaea;
+    background: #ffffff;
     overflow: hidden;
   }
 
-  .card-image img {
+  .window img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .card-body {
+  .spec-strip {
     padding: 0.6rem 0.7rem 0.8rem;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.2rem;
   }
 
-  .card-title {
+  .meta {
     margin: 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--meta);
+  }
+
+  .title {
+    margin: 0;
+    font-family: var(--font-body);
     font-size: 0.85rem;
-    line-height: 1.3;
+    line-height: 1.35;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .card-price {
-    margin: 0.15rem 0 0;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .card-condition {
-    margin: 0;
-    font-size: 0.75rem;
-    color: var(--ink-muted);
+  .price {
+    margin: 0.1rem 0 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--reed-red);
   }
 </style>

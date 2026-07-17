@@ -5,6 +5,7 @@
     "price": 9,
     "currency": "USD",
     "condition": "Acceptable",
+    "category": "Comics",
     "images": [
       "https://i.ebayimg.com/images/g/Y9EAAeSw7MFpFSbM/s-l1600.jpg"
     ],
@@ -19,7 +20,7 @@
       "Genre": "Family"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599018770",
-    "updatedAt": "2026-07-17T20:55:24.202Z"
+    "updatedAt": "2026-07-17T22:23:52.758Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -27,6 +28,7 @@
     "price": 5,
     "currency": "USD",
     "condition": "Acceptable",
+    "category": "Comics",
     "images": [
       "https://i.ebayimg.com/images/g/e6YAAeSwJxFpFSh7/s-l1600.jpg"
     ],
@@ -40,7 +42,7 @@
       "Publisher": "DC Comics"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599029479",
-    "updatedAt": "2026-07-17T20:55:24.202Z"
+    "updatedAt": "2026-07-17T22:23:52.751Z"
   },
   {
     "id": "v1|306599041925|0",
@@ -48,6 +50,7 @@
     "price": 6.75,
     "currency": "USD",
     "condition": "Acceptable",
+    "category": "Comics",
     "images": [
       "https://i.ebayimg.com/images/g/8cgAAeSwMN5pFSmz/s-l1600.jpg"
     ],
@@ -66,6 +69,6 @@
       "Genre": "Superheroes"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599041925",
-    "updatedAt": "2026-07-17T20:55:24.202Z"
+    "updatedAt": "2026-07-17T22:23:52.758Z"
   }
 ]

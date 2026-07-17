@@ -148,6 +148,14 @@ function stripHtml(html) {
     .trim();
 }
 
+/** Buckets eBay's own category taxonomy into the brand's 3 bands. */
+function categorize(categoryPath) {
+  const path = (categoryPath ?? "").toLowerCase();
+  if (path.includes("comic")) return "Comics";
+  if (path.includes("trading card") || path.includes("sports card")) return "Sports Cards";
+  return "Memorabilia";
+}
+
 function normalizeItem(detail) {
   const images = [];
   if (detail.image?.imageUrl) images.push(detail.image.imageUrl);
@@ -168,6 +176,7 @@ function normalizeItem(detail) {
     price: Number(detail.price?.value),
     currency: detail.price?.currency ?? "USD",
     condition: detail.condition ?? null,
+    category: categorize(detail.categoryPath),
     images,
     description: stripHtml(detail.shortDescription ?? detail.description ?? ""),
     specifics,

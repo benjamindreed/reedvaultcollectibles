@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import productsData from "../../data/products.json";
-import { resizeImage, formatPrice, itemPath, itemSlug } from "../../lib/products";
+import { resizeImage, formatPrice, itemPath, itemSlug, CATEGORY_BAND } from "../../lib/products";
 import type { Product } from "../../lib/products";
 
 export function getStaticPaths() {
@@ -25,6 +25,7 @@ const metaDescription =
   description.length > 155 ? `${description.slice(0, 155).trimEnd()}…` : description;
 
 const specificsEntries = Object.entries(product.specifics);
+const band = CATEGORY_BAND[product.category];
 
 const jsonLd = {
   "@context": "https://schema.org/",
@@ -55,6 +56,9 @@ const jsonLd = {
 
     <div class="item-layout">
       <div class="gallery">
+        <div class="band" style={`background:${band.bg};color:${band.fg}`}>
+          {product.category}
+        </div>
         {
           mainImage && (
             <img
@@ -115,9 +119,12 @@ const jsonLd = {
 
   .back-link {
     display: inline-block;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    color: var(--ink-muted);
+    margin: 1.5rem 0 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--meta);
     text-decoration: none;
   }
 
@@ -127,28 +134,48 @@ const jsonLd = {
     gap: 2rem;
   }
 
+  .gallery {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .band {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.45rem 0.85rem;
+  }
+
   .gallery-main {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #ffffff;
   }
 
   .gallery-thumbs {
     display: flex;
     gap: 0.5rem;
-    margin-top: 0.6rem;
+    padding: 0.6rem;
     flex-wrap: wrap;
   }
 
   .thumb {
     padding: 0;
     border: 1px solid var(--border);
+    border-radius: var(--radius);
     background: var(--surface);
     width: 64px;
     height: 64px;
     overflow: hidden;
+    transition: border-color 160ms ease-out;
+  }
+
+  .thumb:hover {
+    border-color: var(--reed-red);
   }
 
   .thumb img {
@@ -158,31 +185,45 @@ const jsonLd = {
   }
 
   .item-info h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
     font-size: 1.35rem;
     line-height: 1.3;
     margin: 0 0 0.5rem;
   }
 
   .item-price {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--reed-red);
     margin: 0 0 0.25rem;
   }
 
   .item-condition {
-    color: var(--ink-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--meta);
     margin: 0 0 1rem;
   }
 
   .buy-button {
     display: block;
     text-align: center;
-    background: var(--accent);
-    color: var(--accent-ink);
+    background: var(--reed-red);
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+    border-radius: var(--radius);
     padding: 0.9rem 1rem;
     margin-bottom: 1.25rem;
+    transition: transform 160ms ease-out;
+  }
+
+  .buy-button:hover {
+    transform: translateY(-2px);
   }
 
   .item-description {
@@ -199,7 +240,11 @@ const jsonLd = {
   }
 
   .specifics dt {
-    color: var(--ink-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
   }
 
   .specifics dd {

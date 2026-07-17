@@ -1,13 +1,31 @@
 :root {
   color-scheme: light;
-  --bg: #f4f4f2;
+
+  /* Reed Vault brand tokens */
+  --reed-red: #e8443b;
+  --vault-blue: #2c8fd6;
+  --mint: #17adbc;
+  --foil-gold: #e7a94c;
+  --bubblegum: #f56ba3;
+  --ink: #25211d;
+  --cream: #fbf8f3;
+  --slab: #dde1e6;
+  --meta: #8b857c;
+
+  --bg: #ffffff;
   --surface: #ffffff;
-  --ink: #16161a;
-  --ink-muted: #5c5c66;
-  --border: #dcdce0;
-  --accent: #1a1a2e;
+  --ink-muted: var(--meta);
+  --border: var(--slab);
+  --accent: var(--reed-red);
   --accent-ink: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --radius: 4px;
+
+  --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
+
+  font-family: var(--font-body);
 }
 
 * {
@@ -18,7 +36,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.4;
+  line-height: 1.55;
+  font-size: 16px;
 }
 
 a {
@@ -31,28 +50,40 @@ img {
 }
 
 .site-header {
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 2.5rem;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 1.25rem;
-  letter-spacing: 0.02em;
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
-.site-header a {
-  text-decoration: none;
+.wordmark .dot {
+  color: var(--reed-red);
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0 2.5rem 2.5rem;
 }
 
 button {
   font: inherit;
   cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

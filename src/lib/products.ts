@@ -1,15 +1,26 @@
+export type Category = "Comics" | "Sports Cards" | "Memorabilia";
+
 export interface Product {
   id: string;
   title: string;
   price: number;
   currency: string;
   condition: string | null;
+  category: Category;
   images: string[];
   description: string;
   specifics: Record<string, string>;
   itemWebUrl: string;
   updatedAt: string;
 }
+
+/** Band color per category, plus the text color that stays legible on it
+ *  (brand rule: red/blue take white text, mint/gold/pink take ink). */
+export const CATEGORY_BAND: Record<Category, { bg: string; fg: string }> = {
+  Comics: { bg: "var(--reed-red)", fg: "#ffffff" },
+  "Sports Cards": { bg: "var(--vault-blue)", fg: "#ffffff" },
+  Memorabilia: { bg: "var(--mint)", fg: "var(--ink)" },
+};
 
 /** eBay CDN URLs encode size in the filename suffix (e.g. s-l225.jpg, s-l1600.jpg). */
 export function resizeImage(url: string, size: "s-l500" | "s-l1600"): string {
