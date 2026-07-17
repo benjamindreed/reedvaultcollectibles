@@ -1,0 +1,224 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import productsData from "../../data/products.json";
+import { resizeImage, formatPrice, itemPath, itemSlug } from "../../lib/products";
+import type { Product } from "../../lib/products";
+
+export function getStaticPaths() {
+  const products = productsData as Product[];
+  return products.map((product) => ({
+    params: { id: itemSlug(product.id) },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props as { product: Product };
+
+const images = product.images.map((img) => ({
+  thumb: resizeImage(img, "s-l500"),
+  full: resizeImage(img, "s-l1600"),
+}));
+const mainImage = images[0]?.full ?? null;
+
+const description = product.description || product.title;
+const metaDescription =
+  description.length > 155 ? `${description.slice(0, 155).trimEnd()}…` : description;
+
+const specificsEntries = Object.entries(product.specifics);
+
+const jsonLd = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: product.title,
+  image: images.map((img) => img.full),
+  description,
+  offers: {
+    "@type": "Offer",
+    price: product.price,
+    priceCurrency: product.currency,
+    availability: "https://schema.org/InStock",
+    url: product.itemWebUrl,
+  },
+};
+---
+
+<BaseLayout
+  title={`${product.title} | Reed Vault Collectibles`}
+  description={metaDescription}
+  image={mainImage ?? undefined}
+  canonicalPath={itemPath(product.id)}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <main class="container item-page">
+    <a class="back-link" href="/">&larr; Back to catalog</a>
+
+    <div class="item-layout">
+      <div class="gallery">
+        {
+          mainImage && (
+            <img
+              class="gallery-main"
+              id="gallery-main"
+              src={mainImage}
+              width="800"
+              height="800"
+              alt={product.title}
+            />
+          )
+        }
+        {
+          images.length > 1 && (
+            <div class="gallery-thumbs">
+              {images.map((img) => (
+                <button type="button" class="thumb" data-full={img.full}>
+                  <img src={img.thumb} width="120" height="120" loading="lazy" alt="" />
+                </button>
+              ))}
+            </div>
+          )
+        }
+      </div>
+
+      <div class="item-info">
+        <h1>{product.title}</h1>
+        <p class="item-price">{formatPrice(product.price, product.currency)}</p>
+        {product.condition && <p class="item-condition">Condition: {product.condition}</p>}
+
+        <a class="buy-button" href={product.itemWebUrl} target="_blank" rel="noopener">
+          Buy on eBay
+        </a>
+
+        <p class="item-description">{product.description}</p>
+
+        {
+          specificsEntries.length > 0 && (
+            <dl class="specifics">
+              {specificsEntries.map(([key, value]) => (
+                <Fragment>
+                  <dt>{key}</dt>
+                  <dd>{value}</dd>
+                </Fragment>
+              ))}
+            </dl>
+          )
+        }
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .item-page {
+    max-width: 1100px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+
+  .item-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+    gap: 2rem;
+  }
+
+  .gallery-main {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .gallery-thumbs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .thumb {
+    padding: 0;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item-info h1 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+  }
+
+  .item-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+
+  .item-condition {
+    color: var(--ink-muted);
+    margin: 0 0 1rem;
+  }
+
+  .buy-button {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: var(--accent-ink);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .item-description {
+    white-space: pre-line;
+    margin: 0 0 1.5rem;
+  }
+
+  .specifics {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .specifics dt {
+    color: var(--ink-muted);
+  }
+
+  .specifics dd {
+    margin: 0;
+  }
+
+  @media (max-width: 720px) {
+    .item-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const main = document.getElementById("gallery-main") as HTMLImageElement | null;
+  document.querySelectorAll<HTMLButtonElement>(".thumb").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const full = btn.dataset.full;
+      if (main && full) main.src = full;
+    });
+  });
+</script>

@@ -1,17 +1,181 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import productsData from "../data/products.json";
+import { buildFacets } from "../lib/products";
+import type { Product } from "../lib/products";
 
+const products = productsData as Product[];
+const facets = buildFacets(products);
+const EAGER_COUNT = 8;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Reed Vault Collectibles — Catalog"
+  description={`Browse ${products.length} collectibles for sale, sourced live from our eBay store.`}
+  canonicalPath="/"
+>
+  <main class="container catalog">
+    <aside class="filters" id="filters">
+      <div class="filters-head">
+        <h2>Filters</h2>
+        <button id="clear-filters" type="button">Clear</button>
+      </div>
+      {
+        facets.map(([key, values]) => (
+          <fieldset>
+            <legend>{key}</legend>
+            {values.map((value) => (
+              <label>
+                <input type="checkbox" data-facet={key} data-value={value} />
+                <span>{value}</span>
+              </label>
+            ))}
+          </fieldset>
+        ))
+      }
+    </aside>
+
+    <section class="results">
+      <p id="result-count" class="result-count">
+        {products.length} item{products.length === 1 ? "" : "s"}
+      </p>
+      <div class="grid" id="grid">
+        {
+          products.map((product, i) => (
+            <ProductCard product={product} priority={i < EAGER_COUNT} />
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .catalog {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .filters {
+    position: sticky;
+    top: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .filters-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+
+  .filters-head h2 {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+
+  #clear-filters {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  fieldset {
+    border: none;
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  legend {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    padding: 0;
+  }
+
+  fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    padding: 0.15rem 0;
+  }
+
+  .result-count {
+    margin: 0 0 0.75rem;
+    color: var(--ink-muted);
+    font-size: 0.85rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.9rem;
+  }
+
+  @media (max-width: 720px) {
+    .catalog {
+      grid-template-columns: 1fr;
+    }
+    .filters {
+      position: static;
+    }
+  }
+</style>
+
+<script>
+  const cards = Array.from(document.querySelectorAll<HTMLAnchorElement>(".card"));
+  const countEl = document.getElementById("result-count");
+  const clearBtn = document.getElementById("clear-filters");
+  const checkboxes = Array.from(
+    document.querySelectorAll<HTMLInputElement>('#filters input[type="checkbox"]')
+  );
+
+  function activeFilters(): Map<string, Set<string>> {
+    const map = new Map<string, Set<string>>();
+    for (const cb of checkboxes) {
+      if (!cb.checked) continue;
+      const key = cb.dataset.facet!;
+      const value = cb.dataset.value!;
+      if (!map.has(key)) map.set(key, new Set());
+      map.get(key)!.add(value);
+    }
+    return map;
+  }
+
+  function applyFilters() {
+    const filters = activeFilters();
+    let visible = 0;
+
+    for (const card of cards) {
+      const specifics = JSON.parse(card.dataset.specifics || "{}") as Record<string, string>;
+      let matches = true;
+      for (const [key, values] of filters) {
+        if (!values.has(specifics[key])) {
+          matches = false;
+          break;
+        }
+      }
+      card.style.display = matches ? "" : "none";
+      if (matches) visible++;
+    }
+
+    if (countEl) {
+      countEl.textContent = `${visible} of ${cards.length} item${cards.length === 1 ? "" : "s"}`;
+    }
+  }
+
+  checkboxes.forEach((cb) => cb.addEventListener("change", applyFilters));
+  clearBtn?.addEventListener("click", () => {
+    checkboxes.forEach((cb) => (cb.checked = false));
+    applyFilters();
+  });
+</script>

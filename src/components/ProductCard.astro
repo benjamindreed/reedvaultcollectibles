@@ -1,0 +1,91 @@
+---
+import { resizeImage, formatPrice, itemPath } from "../lib/products";
+import type { Product } from "../lib/products";
+
+interface Props {
+  product: Product;
+  priority?: boolean;
+}
+
+const { product, priority = false } = Astro.props;
+const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
+---
+
+<a
+  class="card"
+  href={itemPath(product.id)}
+  data-specifics={JSON.stringify(product.specifics)}
+>
+  <div class="card-image">
+    {
+      thumb && (
+        <img
+          src={thumb}
+          width="500"
+          height="500"
+          alt={product.title}
+          loading={priority ? "eager" : "lazy"}
+          fetchpriority={priority ? "high" : "auto"}
+        />
+      )
+    }
+  </div>
+  <div class="card-body">
+    <p class="card-title">{product.title}</p>
+    <p class="card-price">{formatPrice(product.price, product.currency)}</p>
+    {product.condition && <p class="card-condition">{product.condition}</p>}
+  </div>
+</a>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+  }
+
+  .card-image {
+    aspect-ratio: 1 / 1;
+    background: #eaeaea;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 0.6rem 0.7rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-price {
+    margin: 0.15rem 0 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .card-condition {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>
