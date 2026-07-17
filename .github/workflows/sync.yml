@@ -1,0 +1,26 @@
+name: Sync eBay Catalog
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - run: node scripts/fetch-ebay.mjs
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_SELLER: ${{ secrets.EBAY_SELLER }}
+      - run: |
+          git config user.name "catalog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/data/products.json
+          git diff --staged --quiet || git commit -m "sync: $(date -u +%F_%H:%M)"
+          git push
