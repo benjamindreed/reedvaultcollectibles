@@ -18,11 +18,13 @@ const collage = CATEGORY_ORDER.map((category) => {
 
 const sellerUrl = `https://www.ebay.com/usr/${encodeURIComponent(ebaySeller)}`;
 
-// Marketing banner, not a real-data claim: image is decorative (borrowed from whatever's
-// currently the highest-priced real listing, for visual interest), and the "Our best
-// collectibles / Priceless" copy is intentionally generic, not attributed to that item.
-// This is separate from the real, Trading-API-sourced Grail chip/status facet elsewhere.
-const bannerProduct = [...products].sort((a, b) => b.price - a.price)[0] ?? null;
+// Marketing banner. Prefers the highest-priced item actually tagged Grail (real,
+// Trading-API-sourced Store Category data) once that's flowing; falls back to the
+// highest-priced item overall until then. Either way, the "Our best collectibles /
+// Priceless" copy stays generic — it's decorative framing, not a factual per-item claim.
+const grailProducts = products.filter((p) => p.grail);
+const bannerPool = grailProducts.length > 0 ? grailProducts : products;
+const bannerProduct = [...bannerPool].sort((a, b) => b.price - a.price)[0] ?? null;
 const bannerThumb = bannerProduct?.images[0] ? resizeImage(bannerProduct.images[0], "s-l500") : null;
 
 const stats: [string, string][] = [
