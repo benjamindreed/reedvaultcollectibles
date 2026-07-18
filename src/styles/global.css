@@ -3,6 +3,7 @@
 
   /* Reed Vault brand tokens */
   --reed-red: #e8443b;
+  --reed-red-hover: #ce362e;
   --vault-blue: #2c8fd6;
   --mint: #17adbc;
   --foil-gold: #e7a94c;
@@ -10,16 +11,28 @@
   --ink: #25211d;
   --cream: #fbf8f3;
   --slab: #dde1e6;
+  --rule: #eae4da;
   --meta: #8b857c;
 
   --bg: #ffffff;
   --surface: #ffffff;
   --ink-muted: var(--meta);
-  --border: var(--slab);
+  --border: var(--rule);
   --accent: var(--reed-red);
   --accent-ink: #ffffff;
 
   --radius: 4px;
+  --radius-card: 8px;
+
+  --maxw: 1200px;
+  --gutter: 40px;
+  --grid-gap: 22px;
+
+  --shadow-sm: 0 2px 8px rgba(37, 33, 29, 0.06);
+  --shadow-lift: 0 8px 24px rgba(37, 33, 29, 0.1);
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 160ms;
 
   --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -49,31 +62,10 @@ img {
   max-width: 100%;
 }
 
-.site-header {
-  padding: 1.25rem 2.5rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-.wordmark .dot {
-  color: var(--reed-red);
-}
-
 .container {
-  max-width: 1200px;
+  max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 var(--gutter);
 }
 
 button {

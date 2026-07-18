@@ -1,26 +1,34 @@
 ---
-import { resizeImage, formatPrice, itemPath, CATEGORY_BAND } from "../lib/products";
+import { resizeImage, formatPrice, itemPath, CATEGORY_BAND, CATEGORY_ICON, chipOf } from "../lib/products";
 import type { Product } from "../lib/products";
 
 interface Props {
   product: Product;
   priority?: boolean;
+  graded?: "Graded" | "Ungraded";
 }
 
-const { product, priority = false } = Astro.props;
+const { product, priority = false, graded } = Astro.props;
 const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
 const band = CATEGORY_BAND[product.category];
+const icon = CATEGORY_ICON[product.category];
+const chip = chipOf(product);
 ---
 
 <a
   class="card"
   href={itemPath(product.id)}
   data-specifics={JSON.stringify(product.specifics)}
+  data-category={product.category}
+  data-graded={graded}
+  data-status={chip?.label ?? "Available"}
+  data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
 >
   <div class="band" style={`background:${band.bg};color:${band.fg}`}>
-    {product.category}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icon} />
   </div>
   <div class="window">
+    {chip && <span class="chip" style={`background:${chip.bg};color:${chip.fg}`}>{chip.label}</span>}
     {
       thumb && (
         <img
@@ -51,7 +59,7 @@ const band = CATEGORY_BAND[product.category];
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    transition: transform 160ms ease-out, border-color 160ms ease-out;
+    transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
   }
 
   .card:hover {
@@ -59,15 +67,17 @@ const band = CATEGORY_BAND[product.category];
   }
 
   .band {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 0.35rem 0.7rem;
+    display: flex;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .band svg {
+    width: 16px;
+    height: 16px;
   }
 
   .window {
+    position: relative;
     aspect-ratio: 1 / 1;
     background: #ffffff;
     overflow: hidden;
@@ -77,6 +87,19 @@ const band = CATEGORY_BAND[product.category];
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .chip {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
   }
 
   .spec-strip {

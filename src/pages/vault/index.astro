@@ -1,0 +1,567 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import productsData from "../../data/products.json";
+import {
+  resizeImage,
+  formatPrice,
+  itemPath,
+  chipOf,
+  CATEGORY_BAND,
+  CATEGORY_ICON,
+  CATEGORY_SLUG,
+  type Product,
+  type Category,
+} from "../../lib/products";
+
+const products = productsData as Product[];
+
+const GRADE_MARKS = /\b(CGC|PSA|BGS|SGC)\b/i;
+function isGraded(product: Product): boolean {
+  const haystack = [product.title, ...Object.values(product.specifics)].join(" ");
+  return GRADE_MARKS.test(haystack);
+}
+
+function statusOf(product: Product): string {
+  return chipOf(product)?.label ?? "Available";
+}
+
+const CATEGORY_ORDER: Category[] = ["Comics", "Trading Cards", "Memorabilia"];
+const categoryCounts = CATEGORY_ORDER.map((category) => ({
+  value: category,
+  slug: CATEGORY_SLUG[category],
+  count: products.filter((p) => p.category === category).length,
+}));
+
+const gradingCounts = [
+  { value: "Graded", count: products.filter(isGraded).length },
+  { value: "Ungraded", count: products.filter((p) => !isGraded(p)).length },
+];
+
+const STATUS_ORDER = ["Just in", "Last one", "Available"];
+const statusCounts = STATUS_ORDER.map((value) => ({
+  value,
+  count: products.filter((p) => statusOf(p) === value).length,
+})).filter((s) => s.count > 0);
+
+const rows = products.map((p) => ({
+  product: p,
+  graded: (isGraded(p) ? "Graded" : "Ungraded") as "Graded" | "Ungraded",
+  status: statusOf(p),
+}));
+---
+
+<BaseLayout
+  title="The Vault — full inventory | Reed Vault Collectibles"
+  description={`Browse all ${products.length} items in the Reed Vault — comics, trading cards, and memorabilia.`}
+  canonicalPath="/vault/"
+>
+  <main class="container vault-page">
+    <a class="back-link" href="/">← Back to home</a>
+    <div class="rule"></div>
+    <h1>The Vault — full inventory</h1>
+
+    <div class="inv-layout">
+      <aside class="inv-side" id="inv-side">
+        <div class="search-field">
+          <input type="search" id="inv-search" placeholder="Search the vault…" />
+        </div>
+
+        <div class="controls-row">
+          <select id="inv-sort" class="sort-select">
+            <option value="new">Newest</option>
+            <option value="old">Oldest</option>
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+          </select>
+          <div class="view-toggle">
+            <button type="button" id="view-grid" class="view-btn on" aria-label="Grid view">▦</button>
+            <button type="button" id="view-list" class="view-btn" aria-label="List view">☰</button>
+          </div>
+        </div>
+
+        <fieldset class="facet" data-facet-group="category">
+          <legend>Category</legend>
+          {
+            categoryCounts.map(({ value, slug, count }) => (
+              <label>
+                <input type="checkbox" data-facet="category" data-value={value} data-slug={slug} />
+                <span>{value}</span>
+                <span class="fcount">{count}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+
+        <fieldset class="facet" data-facet-group="grading">
+          <legend>Grading</legend>
+          {
+            gradingCounts.map(({ value, count }) => (
+              <label>
+                <input type="checkbox" data-facet="grading" data-value={value} />
+                <span>{value}</span>
+                <span class="fcount">{count}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+
+        {
+          statusCounts.length > 0 && (
+            <fieldset class="facet" data-facet-group="status">
+              <legend>Status</legend>
+              {statusCounts.map(({ value, count }) => (
+                <label>
+                  <input type="checkbox" data-facet="status" data-value={value} />
+                  <span>{value}</span>
+                  <span class="fcount">{count}</span>
+                </label>
+              ))}
+            </fieldset>
+          )
+        }
+
+        <button type="button" id="clear-filters" class="clear-link" hidden>Clear filters</button>
+      </aside>
+
+      <section class="inv-content">
+        <button type="button" id="drawer-toggle" class="drawer-toggle">Filters &amp; sort</button>
+        <p id="result-count" class="result-count">{products.length} items</p>
+
+        <div class="grid" id="inv-grid">
+          {rows.map(({ product, graded }, i) => <ProductCard product={product} graded={graded} priority={i < 8} />)}
+        </div>
+
+        <div class="list" id="inv-list" hidden>
+          {
+            rows.map(({ product, graded, status }) => {
+              const band = CATEGORY_BAND[product.category];
+              const icon = CATEGORY_ICON[product.category];
+              const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
+              return (
+                <a
+                  class="list-row"
+                  href={itemPath(product.id)}
+                  data-category={product.category}
+                  data-graded={graded}
+                  data-status={status}
+                  data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
+                >
+                  <span class="list-icon" style={`background:${band.bg};color:${band.fg}`}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icon} />
+                  </span>
+                  {thumb && <img class="list-thumb" src={thumb} alt="" loading="lazy" />}
+                  <span class="list-text">
+                    <span class="list-title">{product.title}</span>
+                    <span class="list-meta">{product.condition}</span>
+                  </span>
+                  <span class="list-price">{formatPrice(product.price, product.currency)}</span>
+                </a>
+              );
+            })
+          }
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .vault-page {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--meta);
+    text-decoration: none;
+  }
+
+  .rule {
+    width: 48px;
+    height: 3px;
+    background: var(--reed-red);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.9rem;
+    margin: 0 0 2rem;
+  }
+
+  .inv-layout {
+    display: grid;
+    grid-template-columns: 186px 1fr;
+    gap: var(--grid-gap);
+    align-items: start;
+  }
+
+  .inv-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .search-field input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: none;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+  }
+
+  .search-field input:focus {
+    outline: none;
+    border-bottom-color: var(--reed-red);
+  }
+
+  .controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .sort-select {
+    border: none;
+    background: none;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    padding: 0;
+  }
+
+  .view-toggle {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .view-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 26px;
+    height: 26px;
+    color: var(--meta);
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  .view-btn.on {
+    border-color: var(--reed-red);
+    color: var(--reed-red);
+  }
+
+  .facet {
+    border: none;
+    border-top: 1px solid var(--border);
+    padding: 0.75rem 0 0;
+    margin: 0;
+  }
+
+  .facet legend {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--meta);
+    padding: 0;
+  }
+
+  .facet label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    padding: 0.2rem 0;
+  }
+
+  .fcount {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--meta);
+  }
+
+  .clear-link {
+    background: none;
+    border: none;
+    color: var(--reed-red);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0;
+    text-align: left;
+  }
+
+  .drawer-toggle {
+    display: none;
+  }
+
+  .result-count {
+    margin: 0 0 1rem;
+    color: var(--meta);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .grid[hidden],
+  .list[hidden] {
+    display: none;
+  }
+
+  .list-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform var(--dur) var(--ease);
+  }
+
+  .list-row:hover {
+    transform: translateY(-2px);
+  }
+
+  .list-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .list-thumb {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    flex-shrink: 0;
+  }
+
+  .list-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .list-title {
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list-meta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
+  }
+
+  .list-price {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--reed-red);
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 780px) {
+    .inv-layout {
+      grid-template-columns: 1fr;
+    }
+    .inv-side {
+      display: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .inv-side.open {
+      display: flex;
+    }
+    .drawer-toggle {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 430px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  type Row = { el: HTMLElement; specifics: Record<string, string> };
+
+  const gridEl = document.getElementById("inv-grid") as HTMLElement;
+  const listEl = document.getElementById("inv-list") as HTMLElement;
+  const countEl = document.getElementById("result-count");
+  const searchInput = document.getElementById("inv-search") as HTMLInputElement;
+  const sortSelect = document.getElementById("inv-sort") as HTMLSelectElement;
+  const clearBtn = document.getElementById("clear-filters") as HTMLButtonElement;
+  const checkboxes = Array.from(document.querySelectorAll<HTMLInputElement>(".facet input[type=checkbox]"));
+  const gridBtn = document.getElementById("view-grid") as HTMLButtonElement;
+  const listBtn = document.getElementById("view-list") as HTMLButtonElement;
+  const drawerToggle = document.getElementById("drawer-toggle");
+  const sideEl = document.getElementById("inv-side");
+
+  const gridCards = Array.from(gridEl.querySelectorAll<HTMLAnchorElement>(".card"));
+  const listRows = Array.from(listEl.querySelectorAll<HTMLAnchorElement>(".list-row"));
+
+  // Preselect category from ?category=slug (from homepage category shortcuts).
+  const params = new URLSearchParams(location.search);
+  const preselect = params.get("category");
+  if (preselect) {
+    const match = checkboxes.find((cb) => cb.dataset.facet === "category" && cb.dataset.slug === preselect);
+    if (match) match.checked = true;
+  }
+
+  function activeFilters(): Map<string, Set<string>> {
+    const map = new Map<string, Set<string>>();
+    for (const cb of checkboxes) {
+      if (!cb.checked) continue;
+      const key = cb.dataset.facet!;
+      const value = cb.dataset.value!;
+      if (!map.has(key)) map.set(key, new Set());
+      map.get(key)!.add(value);
+    }
+    return map;
+  }
+
+  function matches(el: HTMLElement, filters: Map<string, Set<string>>, query: string): boolean {
+    if (query && !(el.dataset.search ?? "").includes(query)) return false;
+    for (const [key, values] of filters) {
+      let fieldValue: string | undefined;
+      if (key === "category") fieldValue = el.dataset.category;
+      else if (key === "grading") fieldValue = el.dataset.graded;
+      else if (key === "status") fieldValue = el.dataset.status;
+      if (!fieldValue || !values.has(fieldValue)) return false;
+    }
+    return true;
+  }
+
+  function applyFilters() {
+    const filters = activeFilters();
+    const query = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+
+    for (const card of gridCards) {
+      const show = matches(card, filters, query);
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    }
+    for (const row of listRows) {
+      const show = matches(row, filters, query);
+      row.style.display = show ? "" : "none";
+    }
+
+    if (countEl) countEl.textContent = `${visible} item${visible === 1 ? "" : "s"}`;
+    clearBtn.hidden = filters.size === 0;
+  }
+
+  function priceOf(el: HTMLElement): number {
+    return Number(el.querySelector(".price, .list-price")?.textContent?.replace(/[^0-9.]/g, "") || 0);
+  }
+
+  function applySort() {
+    const mode = sortSelect.value;
+    const cmp = (a: HTMLElement, b: HTMLElement) => {
+      if (mode === "price-asc") return priceOf(a) - priceOf(b);
+      if (mode === "price-desc") return priceOf(b) - priceOf(a);
+      return 0; // "new"/"old" already reflect build-time order; static site has no live timestamps to re-sort by.
+    };
+    const sortedGrid = [...gridCards].sort(cmp);
+    const sortedList = [...listRows].sort(cmp);
+    if (mode === "old") {
+      sortedGrid.reverse();
+      sortedList.reverse();
+    }
+    sortedGrid.forEach((el) => gridEl.appendChild(el));
+    sortedList.forEach((el) => listEl.appendChild(el));
+  }
+
+  checkboxes.forEach((cb) => cb.addEventListener("change", applyFilters));
+  searchInput.addEventListener("input", applyFilters);
+  sortSelect.addEventListener("change", applySort);
+  clearBtn.addEventListener("click", () => {
+    checkboxes.forEach((cb) => (cb.checked = false));
+    searchInput.value = "";
+    applyFilters();
+  });
+
+  gridBtn.addEventListener("click", () => {
+    gridEl.hidden = false;
+    listEl.hidden = true;
+    gridBtn.classList.add("on");
+    listBtn.classList.remove("on");
+  });
+  listBtn.addEventListener("click", () => {
+    gridEl.hidden = true;
+    listEl.hidden = false;
+    listBtn.classList.add("on");
+    gridBtn.classList.remove("on");
+  });
+
+  drawerToggle?.addEventListener("click", () => sideEl?.classList.toggle("open"));
+
+  applyFilters();
+</script>

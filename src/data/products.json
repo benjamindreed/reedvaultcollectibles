@@ -5,7 +5,7 @@
     "price": 15,
     "currency": "USD",
     "condition": "Ungraded",
-    "category": "Sports Cards",
+    "category": "Trading Cards",
     "images": [
       "https://i.ebayimg.com/images/g/D-kAAeSwDTBqWsMA/s-l1600.jpg",
       "https://i.ebayimg.com/images/g/kJUAAeSwwvJqWsMT/s-l1600.jpg"
@@ -25,7 +25,10 @@
       "Season": "2024"
     },
     "itemWebUrl": "https://www.ebay.com/itm/307069932385",
-    "updatedAt": "2026-07-18T18:49:51.474Z"
+    "createdAt": "2026-07-18T00:11:11.000Z",
+    "justIn": true,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.173Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -39,16 +42,25 @@
     ],
     "description": "Comic is in used condition and comes with protective plastic sleeve. Color is still vibrant and good.",
     "specifics": {
-      "Publication Year": "1979",
-      "Type": "Comic Book",
-      "Character": "Bat-Man",
+      "Unit of Sale": "Single Unit",
+      "Character": "The Batman",
       "Tradition": "US Comics",
       "Series Title": "Batman: Family",
+      "Universe": "DC Universe",
       "Publisher": "DC Comics",
+      "Vintage": "Yes",
+      "Publication Year": "1979",
+      "Type": "Comic Book",
+      "Issue Number": "481",
+      "Era": "Bronze Age (1970-83)",
+      "Superhero Team": "Justice League of America",
       "Genre": "Family"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599018770",
-    "updatedAt": "2026-07-18T18:49:51.475Z"
+    "createdAt": "2025-11-13T00:33:47.000Z",
+    "justIn": false,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.174Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -70,7 +82,47 @@
       "Publisher": "DC Comics"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599029479",
-    "updatedAt": "2026-07-18T18:49:51.474Z"
+    "createdAt": "2025-11-13T00:40:37.000Z",
+    "justIn": false,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.173Z"
+  },
+  {
+    "id": "v1|307071619896|0",
+    "title": "Detective Comics #447 (DC Comics May 1975)",
+    "price": 10,
+    "currency": "USD",
+    "condition": "Good",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/tNIAAeSw2OhqW~D9/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/AmMAAeSwN-lqW~Dv/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/wVMAAeSwrptqW~D1/s-l1600.jpg"
+    ],
+    "description": "The product is a vintage Detective Comics #447 comic book from May 1975, featuring a storyline written by Len Wein and illustrated by Bob Rozakis, Ernie Chan, A. Martinez, Jose Massaroli, and Dick Giordano. The comic book includes appearances by characters such as Alfred Pennyworth, Clark Kent (Superman), Robin (Dick Grayson), Bat-Man, and The Creeper (Jack Ryder). With a cover by Dick Giordano and Tatjana Wood, this single issue from the Bronze Age era is a collectible piece of comic book history within the DC Universe universe, published by DC Comics in English language.",
+    "specifics": {
+      "Artist/Writer": "Len Wein, Bob Rozakis, Ernie Chan, A. Martinez, José Massaroli, Dick Giordano",
+      "Character": "Alfred Pennyworth, Robin (Dick Grayson), Shirley Middleman, Fred Taylor, The Creeper (Jack Ryder), Creeper (Jack Ryder), Morris Middleman, Batman (Bruce Wayne), Chief Frank McDonald, Clark Kent (Superman) (Cameo), Bat-Man",
+      "Tradition": "US Comics",
+      "Cover Artist": "Dick Giordano, Tatjana Wood",
+      "Series Title": "Detective Comics",
+      "Universe": "DC Universe",
+      "Publisher": "DC Comics",
+      "Vintage": "Yes",
+      "Publication Year": "1975",
+      "Type": "Comic Book",
+      "Format": "Single Issue",
+      "Language": "English",
+      "Issue Number": "447",
+      "Era": "Bronze Age (1970-83)",
+      "Features": "Boarded",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307071619896",
+    "createdAt": "2026-07-18T21:34:21.000Z",
+    "justIn": true,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.169Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -102,7 +154,10 @@
       "Publisher": "Marvel Comics"
     },
     "itemWebUrl": "https://www.ebay.com/itm/307069944180",
-    "updatedAt": "2026-07-18T18:49:51.474Z"
+    "createdAt": "2026-07-18T00:20:32.000Z",
+    "justIn": true,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.173Z"
   },
   {
     "id": "v1|306599041925|0",
@@ -129,6 +184,9 @@
       "Genre": "Superheroes"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599041925",
-    "updatedAt": "2026-07-18T18:49:51.474Z"
+    "createdAt": "2025-11-13T00:46:36.000Z",
+    "justIn": false,
+    "lastOne": true,
+    "updatedAt": "2026-07-18T21:38:26.174Z"
   }
 ]

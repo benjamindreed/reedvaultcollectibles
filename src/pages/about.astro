@@ -1,0 +1,294 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SOCIAL, CONTACT_EMAIL } from "../lib/social";
+---
+
+<BaseLayout
+  title="About Us | Reed Vault Collectibles"
+  description="Four of us, one vault — the story behind Reed Vault Collectibles and how to get in touch."
+  canonicalPath="/about/"
+>
+  <main class="container about-page">
+    <a class="back-link" href="/">← Back to home</a>
+    <div class="rule"></div>
+
+    <div class="about-hero">
+      <div class="about-copy">
+        <h1>Four of us, one vault<span class="dot">.</span></h1>
+        <p>
+          There are four of us — three brothers and one sister — and we run this shop together.
+          We've ripped packs, read comics, obsessed over the memorabilia long before any of it
+          goes up. Much of this store is from our personal collection. We're thrilled to be able
+          to share the fun!
+        </p>
+        <p>
+          We deal openly and honestly, unafraid to show you the true condition of each item,
+          because that's the only way we'd want to buy something ourselves. Everything ships
+          boxed within 3 business days, tracked, with our 30-day return guarantee — no questions
+          asked.
+        </p>
+      </div>
+      <figure class="sib-portrait">
+        <div class="band">
+          <span class="l">The Reed siblings</span><span>No. 1</span>
+        </div>
+        <img src="/images/reed-siblings-comic.jpg" alt="The four Reed siblings, drawn as a comic-book cover" />
+        <figcaption>Three brothers, one sister — the whole vault crew.</figcaption>
+      </figure>
+    </div>
+
+    <div class="contact">
+      <div class="contact-form">
+        <h2>Send us a note</h2>
+        <form id="contact-form">
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" />
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <div class="row">
+          <div class="k">Email us</div>
+          <div class="v"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></div>
+        </div>
+        <div class="row">
+          <div class="k">Also on</div>
+          <div class="v">eBay — Reed Vault Collectibles</div>
+        </div>
+        <div class="row">
+          <div class="k">Follow along</div>
+          <div class="v">
+            <a href={SOCIAL.instagram} target="_blank" rel="noopener">Instagram</a> ·{" "}
+            <a href={SOCIAL.youtube} target="_blank" rel="noopener">YouTube</a> ·{" "}
+            <a href={SOCIAL.facebook} target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="k">Ships</div>
+          <div class="v">Within 3 days, tracked</div>
+        </div>
+        <div class="row">
+          <div class="k">Returns</div>
+          <div class="v">30 days, no questions</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--meta);
+    text-decoration: none;
+  }
+
+  .rule {
+    width: 48px;
+    height: 3px;
+    background: var(--reed-red);
+    margin-bottom: 2rem;
+  }
+
+  .about-hero {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3.5rem;
+  }
+
+  .about-copy h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .about-copy .dot {
+    color: var(--reed-red);
+  }
+
+  .about-copy p {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0 0 1rem;
+  }
+
+  .sib-portrait {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transform: rotate(3deg);
+    box-shadow: var(--shadow-lift);
+    background: var(--surface);
+  }
+
+  .sib-portrait .band {
+    display: flex;
+    justify-content: space-between;
+    background: var(--reed-red);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .sib-portrait img {
+    width: 100%;
+    display: block;
+  }
+
+  .sib-portrait figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--meta);
+    padding: 0.6rem 0.85rem;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .contact-form h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  .field label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
+    margin-bottom: 0.3rem;
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.7rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+  }
+
+  .field textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--reed-red);
+  }
+
+  .btn {
+    background: var(--reed-red);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    transition: background var(--dur) var(--ease);
+  }
+
+  .btn:hover {
+    background: var(--reed-red-hover);
+  }
+
+  .contact-side {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .row:first-child {
+    border-top: none;
+  }
+
+  .k {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
+  }
+
+  .v {
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  .v a {
+    color: var(--reed-red);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .about-hero,
+    .contact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script define:vars={{ email: CONTACT_EMAIL }}>
+  document.getElementById("contact-form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const subject = encodeURIComponent(
+      form.subject.value ? `Reed Vault — ${form.subject.value}` : "Reed Vault — message from the site"
+    );
+    const body = encodeURIComponent(`From: ${form.name.value} (${form.email.value})\n\n${form.message.value}`);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  });
+</script>

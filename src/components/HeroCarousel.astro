@@ -1,0 +1,400 @@
+---
+import { resizeImage, itemPath, type Product, type Category } from "../lib/products";
+import { SOCIAL } from "../lib/social";
+
+interface Props {
+  products: Product[];
+  ebaySeller: string;
+}
+
+const { products, ebaySeller } = Astro.props;
+
+const CATEGORY_ORDER: Category[] = ["Trading Cards", "Comics", "Memorabilia"];
+const collage = CATEGORY_ORDER.map((category) => {
+  const product = products.find((p) => p.category === category && p.images[0]);
+  if (!product) return null;
+  return { category, product, image: resizeImage(product.images[0], "s-l500") };
+}).filter((x): x is { category: Category; product: Product; image: string } => x !== null);
+
+const sellerUrl = `https://www.ebay.com/usr/${encodeURIComponent(ebaySeller)}`;
+
+const stats: [string, string][] = [
+  ["3 DAYS", "Ships within"],
+  ["30 DAY", "Returns, no questions"],
+  ["ALWAYS", "Happy buyers"],
+  ["4", "Siblings, one vault"],
+];
+---
+
+<section class="carousel" id="carousel">
+  <div class="track" id="car-track">
+    <div class="slide accent-red">
+      <div class="slide-copy">
+        <div class="slide-kicker">Reed Vault Collectibles</div>
+        <h1>Where the good stuff lives<span class="dot">.</span></h1>
+        <p>
+          Four of us. Three brothers, one sister. We rip the packs, read the comics, pose the
+          memorabilia — then we tell you what's fun about it before we tell you what it's worth.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="/vault/">Open the Vault</a>
+          <a class="btn ghost" href={sellerUrl} target="_blank" rel="noopener">Buy on eBay</a>
+        </div>
+        <div class="proof">Ships in 3 days · <b>always</b> happy buyers · 4 siblings</div>
+      </div>
+      <div class="slide-right">
+        <div class="collage">
+          {
+            collage.map(({ category, image }, i) => (
+              <a href="/vault/" class={`pc pc-${i}`}>
+                <img src={image} alt={category} loading={i === 0 ? "eager" : "lazy"} />
+                <div class="cap">{category}</div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="slide accent-blue">
+      <div class="slide-copy">
+        <div class="slide-kicker">How we operate</div>
+        <h1>Always honest. Always fast<span class="dot">.</span></h1>
+        <p>
+          We tell you the truth about condition, then we move. Boxed and shipped in three days,
+          tracked the whole way, with 30-day returns and no questions asked.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="/about/">Get in touch</a>
+        </div>
+      </div>
+      <div class="slide-right">
+        <div class="stat-grid">
+          {
+            stats.map(([value, label]) => (
+              <div class="stat">
+                <div class="sv">{value}</div>
+                <div class="sl">{label}</div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="arrow prev" id="car-prev" aria-label="Previous slide">‹</button>
+  <button class="arrow next" id="car-next" aria-label="Next slide">›</button>
+  <div class="dots" id="car-dots">
+    <button class="dot on" data-i="0" aria-label="Slide 1"></button>
+    <button class="dot" data-i="1" aria-label="Slide 2"></button>
+  </div>
+</section>
+
+<style>
+  .carousel {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+
+  .track {
+    display: flex;
+    transition: transform 400ms var(--ease);
+  }
+
+  .slide {
+    flex: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 3rem;
+    border-top: 4px solid transparent;
+  }
+
+  .accent-red {
+    border-top-color: var(--reed-red);
+  }
+
+  .accent-blue {
+    border-top-color: var(--vault-blue);
+  }
+
+  .slide-kicker {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--meta);
+    margin-bottom: 0.75rem;
+  }
+
+  .slide-copy h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+  }
+
+  .slide-copy .dot {
+    color: var(--reed-red);
+  }
+
+  .slide-copy p {
+    color: var(--ink);
+    font-size: 1.05rem;
+    margin: 0 0 1.5rem;
+    max-width: 46ch;
+  }
+
+  .btnrow {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--reed-red);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--radius);
+    padding: 0.85rem 1.5rem;
+    transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+  }
+
+  .btn:hover {
+    background: var(--reed-red-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn.ghost {
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--border);
+  }
+
+  .btn.ghost:hover {
+    border-color: var(--reed-red);
+    color: var(--reed-red);
+  }
+
+  .proof {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
+  }
+
+  .proof b {
+    color: var(--ink);
+  }
+
+  /* Hero collage */
+  .collage {
+    position: relative;
+    height: 300px;
+  }
+
+  .pc {
+    position: absolute;
+    display: block;
+    width: 180px;
+    height: 252px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 14px 30px -12px rgba(37, 33, 29, 0.5);
+    text-decoration: none;
+  }
+
+  .pc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pc .cap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(37, 33, 29, 0.75);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .pc-0 {
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%) rotate(-4deg);
+    z-index: 3;
+  }
+
+  .pc-1 {
+    left: 20px;
+    top: 10px;
+    transform: rotate(-12deg);
+    z-index: 2;
+  }
+
+  .pc-2 {
+    right: 20px;
+    top: 10px;
+    transform: rotate(11deg);
+    z-index: 1;
+  }
+
+  /* Stat grid */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+
+  .stat .sv {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.9rem;
+    color: var(--reed-red);
+  }
+
+  .stat .sl {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--meta);
+    margin-top: 0.25rem;
+  }
+
+  /* Controls */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .arrow.prev {
+    left: 1rem;
+  }
+
+  .arrow.next {
+    right: 1rem;
+  }
+
+  .dots {
+    position: absolute;
+    left: 3rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border);
+    border: none;
+    padding: 0;
+    transition: width var(--dur) var(--ease), background var(--dur) var(--ease);
+  }
+
+  .dot.on {
+    width: 24px;
+    background: var(--reed-red);
+  }
+
+  @media (max-width: 900px) {
+    .slide {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .collage {
+      transform: scale(0.8);
+    }
+    .slide {
+      padding: 1.5rem;
+    }
+    .slide-copy h1 {
+      font-size: 1.9rem;
+    }
+  }
+</style>
+
+<script>
+  const track = document.getElementById("car-track") as HTMLElement;
+  const dots = Array.from(document.querySelectorAll<HTMLButtonElement>("#car-dots .dot"));
+  const slideCount = track.children.length;
+  let index = 0;
+  let timer: ReturnType<typeof setInterval> | null = null;
+
+  function render() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("on", i === index));
+  }
+
+  function go(i: number) {
+    index = (i + slideCount) % slideCount;
+    render();
+  }
+
+  function play() {
+    stop();
+    timer = setInterval(() => go(index + 1), 5500);
+  }
+
+  function stop() {
+    if (timer) clearInterval(timer);
+  }
+
+  document.getElementById("car-prev")?.addEventListener("click", () => {
+    go(index - 1);
+    play();
+  });
+  document.getElementById("car-next")?.addEventListener("click", () => {
+    go(index + 1);
+    play();
+  });
+  dots.forEach((d, i) =>
+    d.addEventListener("click", () => {
+      go(i);
+      play();
+    })
+  );
+
+  const carousel = document.getElementById("carousel");
+  carousel?.addEventListener("mouseenter", stop);
+  carousel?.addEventListener("mouseleave", play);
+
+  play();
+</script>

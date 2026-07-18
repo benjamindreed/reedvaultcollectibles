@@ -152,9 +152,11 @@ function stripHtml(html) {
 function categorize(categoryPath) {
   const path = (categoryPath ?? "").toLowerCase();
   if (path.includes("comic")) return "Comics";
-  if (path.includes("trading card") || path.includes("sports card")) return "Sports Cards";
+  if (path.includes("trading card") || path.includes("sports card")) return "Trading Cards";
   return "Memorabilia";
 }
+
+const JUST_IN_WINDOW_MS = 45 * 24 * 60 * 60 * 1000;
 
 function normalizeItem(detail) {
   const images = [];
@@ -170,6 +172,11 @@ function normalizeItem(detail) {
     }
   }
 
+  const createdAt = detail.itemCreationDate ?? null;
+  const justIn = createdAt !== null && Date.now() - new Date(createdAt).getTime() <= JUST_IN_WINDOW_MS;
+  const availableQty = detail.estimatedAvailabilities?.[0]?.estimatedAvailableQuantity ?? null;
+  const lastOne = availableQty === 1;
+
   return {
     id: detail.itemId,
     title: detail.title,
@@ -181,6 +188,9 @@ function normalizeItem(detail) {
     description: stripHtml(detail.shortDescription ?? detail.description ?? ""),
     specifics,
     itemWebUrl: detail.itemWebUrl,
+    createdAt,
+    justIn,
+    lastOne,
     updatedAt: new Date().toISOString(),
   };
 }
