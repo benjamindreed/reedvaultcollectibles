@@ -1,5 +1,5 @@
 ---
-import { resizeImage, formatPrice, itemPath, CATEGORY_ICON, type Product, type Category } from "../lib/products";
+import { resizeImage, type Product, type Category } from "../lib/products";
 import { SOCIAL } from "../lib/social";
 
 interface Props {
@@ -18,11 +18,12 @@ const collage = CATEGORY_ORDER.map((category) => {
 
 const sellerUrl = `https://www.ebay.com/usr/${encodeURIComponent(ebaySeller)}`;
 
-// Only ever set by real eBay Store Category data (see scripts/fetch-ebay.mjs) — never a
-// price-based guess. This slide simply doesn't render until a real Grail item exists.
-const grailProduct = products.find((p) => p.grail) ?? null;
-const grailThumb = grailProduct?.images[0] ? resizeImage(grailProduct.images[0], "s-l500") : null;
-const grailIcon = grailProduct ? CATEGORY_ICON[grailProduct.category] : null;
+// Marketing banner, not a real-data claim: image is decorative (borrowed from whatever's
+// currently the highest-priced real listing, for visual interest), and the "Our best
+// collectibles / Priceless" copy is intentionally generic, not attributed to that item.
+// This is separate from the real, Trading-API-sourced Grail chip/status facet elsewhere.
+const bannerProduct = [...products].sort((a, b) => b.price - a.price)[0] ?? null;
+const bannerThumb = bannerProduct?.images[0] ? resizeImage(bannerProduct.images[0], "s-l500") : null;
 
 const stats: [string, string][] = [
   ["3 DAYS", "Ships within"],
@@ -31,7 +32,7 @@ const stats: [string, string][] = [
   ["4", "Siblings, one vault"],
 ];
 
-const slideCount = grailProduct ? 3 : 2;
+const slideCount = 3;
 ---
 
 <section class="carousel" id="carousel">
@@ -64,42 +65,38 @@ const slideCount = grailProduct ? 3 : 2;
       </div>
     </div>
 
-    {
-      grailProduct && (
-        <div class="slide accent-gold">
-          <div class="slide-copy">
-            <div class="slide-kicker">Featured · the grails</div>
-            <h1>
-              The best stuff in the vault<span class="dot">.</span>
-            </h1>
-            <p>
-              The pieces we love most — the ones that stopped us in our tracks and brought a
-              memory rushing back. Our favorites, waiting for you.
-            </p>
-            <div class="btnrow">
-              <a class="btn" href="/vault/?status=Grail">
-                Discover the grails
-              </a>
-            </div>
-            <div class="proof">Our favorites · handpicked</div>
-          </div>
-          <div class="slide-right">
-            <a href={itemPath(grailProduct.id)} class="grail-box">
-              <div class="grail-band">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={grailIcon} />
-                <span>Grail</span>
-              </div>
-              <div class="grail-window">{grailThumb && <img src={grailThumb} alt={grailProduct.title} />}</div>
-              <div class="grail-spec">
-                <div class="m">{grailProduct.condition}</div>
-                <div class="t">{grailProduct.title}</div>
-                <div class="p">{formatPrice(grailProduct.price, grailProduct.currency)}</div>
-              </div>
-            </a>
-          </div>
+    <div class="slide accent-gold">
+      <div class="slide-copy">
+        <div class="slide-kicker">Featured · the grails</div>
+        <h1>
+          The best stuff in the vault<span class="dot">.</span>
+        </h1>
+        <p>
+          The pieces we love most — the ones that stopped us in our tracks and brought a memory
+          rushing back. Our favorites, waiting for you.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="/vault/">Discover the grails</a>
         </div>
-      )
-    }
+        <div class="proof">Our favorites · handpicked</div>
+      </div>
+      <div class="slide-right">
+        <a href="/vault/" class="grail-box">
+          <div class="grail-band">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.2 14.6 9.1 21 9.7 16.2 14 17.7 20.4 12 17 6.3 20.4 7.8 14 3 9.7 9.4 9.1Z" />
+            </svg>
+            <span>Grail</span>
+          </div>
+          <div class="grail-window">{bannerThumb && <img src={bannerThumb} alt="Featured collectible" />}</div>
+          <div class="grail-spec">
+            <div class="m">Featured · Grail</div>
+            <div class="t">Our best collectibles</div>
+            <div class="p">Priceless</div>
+          </div>
+        </a>
+      </div>
+    </div>
 
     <div class="slide accent-blue">
       <div class="slide-copy">

@@ -7,6 +7,7 @@ import {
   formatPrice,
   itemPath,
   chipOf,
+  buildFacets,
   CATEGORY_BAND,
   CATEGORY_ICON,
   CATEGORY_SLUG,
@@ -49,6 +50,11 @@ const rows = products.map((p) => ({
   graded: (isGraded(p) ? "Graded" : "Ungraded") as "Graded" | "Ungraded",
   status: statusOf(p),
 }));
+
+// Raw eBay item-specifics (Publisher, Era, Grade, etc.) — a long, variable list, so it's
+// tucked behind a collapsed <details> disclosure rather than always-expanded like the
+// fixed Category/Grading/Status facets above.
+const specificsFacets = buildFacets(products);
 ---
 
 <BaseLayout
@@ -121,6 +127,27 @@ const rows = products.map((p) => ({
           )
         }
 
+        {
+          specificsFacets.length > 0 && (
+            <details class="more-filters">
+              <summary>More filters (eBay details)</summary>
+              <div class="more-filters-body">
+                {specificsFacets.map(([key, values]) => (
+                  <fieldset class="facet" data-facet-group={`specifics:${key}`}>
+                    <legend>{key}</legend>
+                    {values.map((value) => (
+                      <label>
+                        <input type="checkbox" data-facet={`specifics:${key}`} data-value={value} />
+                        <span>{value}</span>
+                      </label>
+                    ))}
+                  </fieldset>
+                ))}
+              </div>
+            </details>
+          )
+        }
+
         <button type="button" id="clear-filters" class="clear-link" hidden>Clear filters</button>
       </aside>
 
@@ -145,6 +172,7 @@ const rows = products.map((p) => ({
                   data-category={product.category}
                   data-graded={graded}
                   data-status={status}
+                  data-specifics={JSON.stringify(product.specifics)}
                   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
                 >
                   <span class="list-icon" style={`background:${band.bg};color:${band.fg}`}>
@@ -296,6 +324,32 @@ const rows = products.map((p) => ({
     color: var(--meta);
   }
 
+  .more-filters {
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+
+  .more-filters summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--reed-red);
+  }
+
+  .more-filters-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .more-filters-body .facet:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
   .clear-link {
     background: none;
     border: none;
@@ -323,7 +377,7 @@ const rows = products.map((p) => ({
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--grid-gap);
   }
 
@@ -495,7 +549,16 @@ const rows = products.map((p) => ({
 
   function matches(el: HTMLElement, filters: Map<string, Set<string>>, query: string): boolean {
     if (query && !(el.dataset.search ?? "").includes(query)) return false;
+
+    let specifics: Record<string, string> | null = null;
     for (const [key, values] of filters) {
+      if (key.startsWith("specifics:")) {
+        specifics ??= JSON.parse(el.dataset.specifics || "{}");
+        const fieldName = key.slice("specifics:".length);
+        const fieldValue = specifics[fieldName];
+        if (!fieldValue || !values.has(fieldValue)) return false;
+        continue;
+      }
       let fieldValue: string | undefined;
       if (key === "category") fieldValue = el.dataset.category;
       else if (key === "grading") fieldValue = el.dataset.graded;
