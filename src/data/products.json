@@ -28,7 +28,7 @@
     "createdAt": "2026-07-18T00:11:11.000Z",
     "justIn": true,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.173Z"
+    "updatedAt": "2026-07-18T21:50:44.682Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -40,52 +40,75 @@
     "images": [
       "https://i.ebayimg.com/images/g/Y9EAAeSw7MFpFSbM/s-l1600.jpg"
     ],
-    "description": "Comic is in used condition and comes with protective plastic sleeve. Color is still vibrant and good.",
+    "description": "This vintage comic book from January 1979, featuring the DC Batman Family, is a must-have for collectors and fans of classic comics. The storyline, \"Murder in the Night,\" is part of the Batman: Family series and showcases the iconic character, The Batman, as he navigates a crime-filled Gotham City. Set during the Bronze Age of comics, this US comic book from DC Comics is a valuable addition to any collection, especially for those interested in the Justice League of America and the DC Universe.",
     "specifics": {
       "Unit of Sale": "Single Unit",
-      "Character": "The Batman",
+      "Character": "The Batman, Bat-Man",
       "Tradition": "US Comics",
+      "Signed": "No",
       "Series Title": "Batman: Family",
       "Universe": "DC Universe",
       "Publisher": "DC Comics",
+      "Inscribed": "No",
+      "Intended Audience": "General Audience",
       "Vintage": "Yes",
       "Publication Year": "1979",
       "Type": "Comic Book",
+      "Format": "Single Issue",
       "Issue Number": "481",
+      "Language": "English",
       "Era": "Bronze Age (1970-83)",
       "Superhero Team": "Justice League of America",
+      "Personalized": "No",
+      "Style": "Color",
       "Genre": "Family"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599018770",
     "createdAt": "2025-11-13T00:33:47.000Z",
     "justIn": false,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.174Z"
+    "updatedAt": "2026-07-18T21:50:44.682Z"
   },
   {
     "id": "v1|306599029479|0",
     "title": "DC Comics Detective Comics Beware the Night of the Batman #451 September 1975",
-    "price": 5,
+    "price": 9,
     "currency": "USD",
     "condition": "Acceptable",
     "category": "Comics",
     "images": [
       "https://i.ebayimg.com/images/g/e6YAAeSwJxFpFSh7/s-l1600.jpg"
     ],
-    "description": "Title: \" Detective Comics #451\",\" Beware the Night Of The Batman \". Date : September 1975.",
+    "description": "The product is a vintage comic book titled \"Detective Comics Beware the Night of the Batman #451\" from September 1975, featuring characters such as Night, Bat-Man, and Detective in the DC Universe. Written by Bob Rozakis and illustrated by Terry Austin, with a cover by Dick Giordano, this single issue falls under the genre of superheroes and comics. Published by DC Comics, this comic book is part of the Bronze Age era of US Comics and showcases the Justice League of America superhero team. A collectible item for fans of comic books and memorabilia.",
     "specifics": {
-      "Publication Year": "1975",
+      "Unit of Sale": "Single Unit",
+      "Artist/Writer": "Bob Rozakis, Terry Austin",
       "Character": "Bat-Man, Detective, Night",
       "Tradition": "US Comics",
-      "Series Title": "Beware the Batman",
-      "Genre": "Comics",
-      "Publisher": "DC Comics"
+      "Cover Artist": "Dick Giordano",
+      "Signed": "No",
+      "Series Title": "Detective Comics",
+      "Universe": "DC Universe",
+      "Publisher": "DC Comics",
+      "Inscribed": "No",
+      "Intended Audience": "General Audience",
+      "Vintage": "Yes",
+      "Publication Year": "1975",
+      "Type": "Comic Book",
+      "Format": "Single Issue",
+      "Issue Number": "451",
+      "Language": "English",
+      "Era": "Bronze Age (1970-83)",
+      "Superhero Team": "Justice League of America",
+      "Personalized": "No",
+      "Style": "Color",
+      "Genre": "Comics, Superheroes"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599029479",
     "createdAt": "2025-11-13T00:40:37.000Z",
     "justIn": false,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.173Z"
+    "updatedAt": "2026-07-18T21:50:44.682Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -122,7 +145,7 @@
     "createdAt": "2026-07-18T21:34:21.000Z",
     "justIn": true,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.169Z"
+    "updatedAt": "2026-07-18T21:50:44.679Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -157,12 +180,12 @@
     "createdAt": "2026-07-18T00:20:32.000Z",
     "justIn": true,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.173Z"
+    "updatedAt": "2026-07-18T21:50:44.682Z"
   },
   {
     "id": "v1|306599041925|0",
     "title": "Marvel Comics The Invincible Iron Man #95 February 1977 Vintage Comic",
-    "price": 6.75,
+    "price": 9,
     "currency": "USD",
     "condition": "Acceptable",
     "category": "Comics",
@@ -187,6 +210,6 @@
     "createdAt": "2025-11-13T00:46:36.000Z",
     "justIn": false,
     "lastOne": true,
-    "updatedAt": "2026-07-18T21:38:26.174Z"
+    "updatedAt": "2026-07-18T21:50:44.682Z"
   }
 ]
