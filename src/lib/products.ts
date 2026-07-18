@@ -14,6 +14,7 @@ export interface Product {
   createdAt: string | null;
   justIn: boolean;
   lastOne: boolean;
+  grail: boolean;
   updatedAt: string;
 }
 
@@ -46,9 +47,10 @@ export const CATEGORY_ICON: Record<Category, string> = {
     '<path d="M8.5 4 4 6.5 2.6 10 6 11.6 6.5 10.2V20a.5 .5 0 0 0 .5 .5H17a.5 .5 0 0 0 .5-.5V10.2L18 11.6 21.4 10 20 6.5 15.5 4C14.8 5.5 9.2 5.5 8.5 4Z"/>',
 };
 
-/** A real, honest status signal only — never a fabricated "Grail"/"Featured" claim.
- *  Priority: scarcity (Last one) over recency (Just in) when both are true. */
-export function chipOf(product: Pick<Product, "lastOne" | "justIn">): Chip | null {
+/** A real, honest status signal only — every value here is sourced from eBay data,
+ *  never inferred/fabricated. Priority: curated (Grail) > scarcity (Last one) > recency (Just in). */
+export function chipOf(product: Pick<Product, "grail" | "lastOne" | "justIn">): Chip | null {
+  if (product.grail) return { label: "Grail", bg: "var(--foil-gold)", fg: "var(--ink)" };
   if (product.lastOne) return { label: "Last one", bg: "var(--reed-red)", fg: "#ffffff" };
   if (product.justIn) return { label: "Just in", bg: "var(--bubblegum)", fg: "var(--ink)" };
   return null;

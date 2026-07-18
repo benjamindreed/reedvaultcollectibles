@@ -115,6 +115,48 @@ async function fetchItemDetail(token, itemId) {
   return res.json();
 }
 
+/**
+ * Store Category names (e.g. a seller-defined "Featured" category) aren't exposed by the
+ * public Browse API — only by the legacy Trading API, authenticated as the seller via a
+ * User Access Token. This is optional enrichment: EBAY_USER_TOKEN may be absent (nothing
+ * uses it yet) or may expire (~18mo, no auto-refresh) without breaking the core sync, so
+ * failures here are logged and swallowed rather than aborting the whole run.
+ */
+async function getStoreCategoryNames(userToken, legacyItemId) {
+  if (!userToken || !legacyItemId) return [];
+
+  const body = `<?xml version="1.0" encoding="utf-8"?>
+<GetItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+  <RequesterCredentials><eBayAuthToken>${userToken}</eBayAuthToken></RequesterCredentials>
+  <ItemID>${legacyItemId}</ItemID>
+  <DetailLevel>ReturnAll</DetailLevel>
+</GetItemRequest>`;
+
+  try {
+    const res = await fetch("https://api.ebay.com/ws/api.dll", {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/xml",
+        "X-EBAY-API-SITEID": "0",
+        "X-EBAY-API-COMPATIBILITY-LEVEL": "1193",
+        "X-EBAY-API-CALL-NAME": "GetItem",
+      },
+      body,
+    });
+    const xml = await res.text();
+    if (/<Ack>Failure<\/Ack>/.test(xml)) {
+      const message = xml.match(/<LongMessage>([^<]*)<\/LongMessage>/)?.[1] ?? "unknown error";
+      throw new Error(message);
+    }
+    return [...xml.matchAll(/<StoreCategoryName>([^<]*)<\/StoreCategoryName>|<StoreCategory2Name>([^<]*)<\/StoreCategory2Name>/g)]
+      .map((m) => m[1] || m[2])
+      .filter(Boolean);
+  } catch (err) {
+    console.error(`Store category lookup failed for item ${legacyItemId} (Grail detection skipped): ${err.message ?? err}`);
+    return [];
+  }
+}
+
 /** Runs fn over items with a bounded number of concurrent in-flight calls. */
 async function mapWithConcurrency(items, limit, fn) {
   const results = new Array(items.length);
@@ -158,7 +200,7 @@ function categorize(categoryPath) {
 
 const JUST_IN_WINDOW_MS = 45 * 24 * 60 * 60 * 1000;
 
-function normalizeItem(detail) {
+function normalizeItem(detail, storeCategoryNames) {
   const images = [];
   if (detail.image?.imageUrl) images.push(detail.image.imageUrl);
   for (const extra of detail.additionalImages ?? []) {
@@ -176,6 +218,7 @@ function normalizeItem(detail) {
   const justIn = createdAt !== null && Date.now() - new Date(createdAt).getTime() <= JUST_IN_WINDOW_MS;
   const availableQty = detail.estimatedAvailabilities?.[0]?.estimatedAvailableQuantity ?? null;
   const lastOne = availableQty === 1;
+  const grail = storeCategoryNames.some((name) => /featured/i.test(name));
 
   return {
     id: detail.itemId,
@@ -191,6 +234,7 @@ function normalizeItem(detail) {
     createdAt,
     justIn,
     lastOne,
+    grail,
     updatedAt: new Date().toISOString(),
   };
 }
@@ -199,6 +243,7 @@ async function main() {
   const clientId = requireEnv("EBAY_CLIENT_ID");
   const clientSecret = requireEnv("EBAY_CLIENT_SECRET");
   const seller = requireEnv("EBAY_SELLER");
+  const userToken = process.env.EBAY_USER_TOKEN || null;
 
   console.log("Requesting OAuth token...");
   const token = await getAccessToken(clientId, clientSecret);
@@ -207,12 +252,16 @@ async function main() {
   const itemIds = await searchAllItemIds(token, seller);
   console.log(`Found ${itemIds.length} item id(s).`);
 
-  console.log(`Fetching item detail (concurrency ${DETAIL_CONCURRENCY})...`);
-  const details = await mapWithConcurrency(itemIds, DETAIL_CONCURRENCY, (itemId) =>
-    fetchItemDetail(token, itemId)
+  console.log(
+    `Fetching item detail (concurrency ${DETAIL_CONCURRENCY})${userToken ? ", including Store Category for Grail detection" : ""}...`
   );
+  const results = await mapWithConcurrency(itemIds, DETAIL_CONCURRENCY, async (itemId) => {
+    const detail = await fetchItemDetail(token, itemId);
+    const storeCategoryNames = await getStoreCategoryNames(userToken, detail.legacyItemId);
+    return { detail, storeCategoryNames };
+  });
 
-  const products = details.map(normalizeItem);
+  const products = results.map(({ detail, storeCategoryNames }) => normalizeItem(detail, storeCategoryNames));
   products.sort((a, b) => a.title.localeCompare(b.title));
 
   if (products.length === 0) {

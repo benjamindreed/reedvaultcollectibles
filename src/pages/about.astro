@@ -142,11 +142,13 @@ import { SOCIAL, CONTACT_EMAIL } from "../lib/social";
 
   .sib-portrait {
     margin: 0;
+    max-width: 340px;
+    justify-self: center;
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: var(--radius-card);
     overflow: hidden;
     transform: rotate(3deg);
-    box-shadow: var(--shadow-lift);
+    box-shadow: 0 18px 40px -18px rgba(37, 33, 29, 0.5);
     background: var(--surface);
   }
 
@@ -277,6 +279,9 @@ import { SOCIAL, CONTACT_EMAIL } from "../lib/social";
     .about-hero,
     .contact {
       grid-template-columns: 1fr;
+    }
+    .sib-portrait {
+      justify-self: start;
     }
   }
 </style>

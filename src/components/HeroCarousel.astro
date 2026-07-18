@@ -1,5 +1,5 @@
 ---
-import { resizeImage, itemPath, type Product, type Category } from "../lib/products";
+import { resizeImage, formatPrice, itemPath, CATEGORY_ICON, type Product, type Category } from "../lib/products";
 import { SOCIAL } from "../lib/social";
 
 interface Props {
@@ -18,12 +18,20 @@ const collage = CATEGORY_ORDER.map((category) => {
 
 const sellerUrl = `https://www.ebay.com/usr/${encodeURIComponent(ebaySeller)}`;
 
+// Only ever set by real eBay Store Category data (see scripts/fetch-ebay.mjs) — never a
+// price-based guess. This slide simply doesn't render until a real Grail item exists.
+const grailProduct = products.find((p) => p.grail) ?? null;
+const grailThumb = grailProduct?.images[0] ? resizeImage(grailProduct.images[0], "s-l500") : null;
+const grailIcon = grailProduct ? CATEGORY_ICON[grailProduct.category] : null;
+
 const stats: [string, string][] = [
   ["3 DAYS", "Ships within"],
   ["30 DAY", "Returns, no questions"],
   ["ALWAYS", "Happy buyers"],
   ["4", "Siblings, one vault"],
 ];
+
+const slideCount = grailProduct ? 3 : 2;
 ---
 
 <section class="carousel" id="carousel">
@@ -56,6 +64,43 @@ const stats: [string, string][] = [
       </div>
     </div>
 
+    {
+      grailProduct && (
+        <div class="slide accent-gold">
+          <div class="slide-copy">
+            <div class="slide-kicker">Featured · the grails</div>
+            <h1>
+              The best stuff in the vault<span class="dot">.</span>
+            </h1>
+            <p>
+              The pieces we love most — the ones that stopped us in our tracks and brought a
+              memory rushing back. Our favorites, waiting for you.
+            </p>
+            <div class="btnrow">
+              <a class="btn" href="/vault/?status=Grail">
+                Discover the grails
+              </a>
+            </div>
+            <div class="proof">Our favorites · handpicked</div>
+          </div>
+          <div class="slide-right">
+            <a href={itemPath(grailProduct.id)} class="grail-box">
+              <div class="grail-band">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={grailIcon} />
+                <span>Grail</span>
+              </div>
+              <div class="grail-window">{grailThumb && <img src={grailThumb} alt={grailProduct.title} />}</div>
+              <div class="grail-spec">
+                <div class="m">{grailProduct.condition}</div>
+                <div class="t">{grailProduct.title}</div>
+                <div class="p">{formatPrice(grailProduct.price, grailProduct.currency)}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      )
+    }
+
     <div class="slide accent-blue">
       <div class="slide-copy">
         <div class="slide-kicker">How we operate</div>
@@ -86,8 +131,7 @@ const stats: [string, string][] = [
   <button class="arrow prev" id="car-prev" aria-label="Previous slide">‹</button>
   <button class="arrow next" id="car-next" aria-label="Next slide">›</button>
   <div class="dots" id="car-dots">
-    <button class="dot on" data-i="0" aria-label="Slide 1"></button>
-    <button class="dot" data-i="1" aria-label="Slide 2"></button>
+    {Array.from({ length: slideCount }).map((_, i) => <button class={`dot ${i === 0 ? "on" : ""}`} data-i={i} aria-label={`Slide ${i + 1}`} />)}
   </div>
 </section>
 
@@ -121,6 +165,10 @@ const stats: [string, string][] = [
 
   .accent-blue {
     border-top-color: var(--vault-blue);
+  }
+
+  .accent-gold {
+    border-top-color: var(--foil-gold);
   }
 
   .slide-kicker {
@@ -254,6 +302,75 @@ const stats: [string, string][] = [
     top: 10px;
     transform: rotate(11deg);
     z-index: 1;
+  }
+
+  /* Grail featured box */
+  .grail-box {
+    display: block;
+    max-width: 280px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .grail-band {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--foil-gold);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .grail-band svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .grail-window {
+    aspect-ratio: 4 / 5;
+    background: #ffffff;
+  }
+
+  .grail-window img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .grail-spec {
+    padding: 0.75rem 0.9rem 1rem;
+  }
+
+  .grail-spec .m {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--meta);
+  }
+
+  .grail-spec .t {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+  }
+
+  .grail-spec .p {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--reed-red);
   }
 
   /* Stat grid */

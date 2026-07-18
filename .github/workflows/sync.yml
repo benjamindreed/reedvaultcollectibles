@@ -18,6 +18,9 @@ jobs:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
           EBAY_SELLER: ${{ secrets.EBAY_SELLER }}
+          # Optional: unlocks Grail detection via Trading API Store Category lookup.
+          # Safe to leave unset — the script no-ops Grail detection without it.
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
       - run: |
           git config user.name "catalog-bot"
           git config user.email "bot@users.noreply.github.com"

@@ -38,7 +38,7 @@ const gradingCounts = [
   { value: "Ungraded", count: products.filter((p) => !isGraded(p)).length },
 ];
 
-const STATUS_ORDER = ["Just in", "Last one", "Available"];
+const STATUS_ORDER = ["Grail", "Last one", "Just in", "Available"];
 const statusCounts = STATUS_ORDER.map((value) => ({
   value,
   count: products.filter((p) => statusOf(p) === value).length,
@@ -467,11 +467,17 @@ const rows = products.map((p) => ({
   const gridCards = Array.from(gridEl.querySelectorAll<HTMLAnchorElement>(".card"));
   const listRows = Array.from(listEl.querySelectorAll<HTMLAnchorElement>(".list-row"));
 
-  // Preselect category from ?category=slug (from homepage category shortcuts).
+  // Preselect facets from the URL (?category=slug from homepage category shortcuts,
+  // ?status=Grail from the "Discover the grails" carousel CTA).
   const params = new URLSearchParams(location.search);
-  const preselect = params.get("category");
-  if (preselect) {
-    const match = checkboxes.find((cb) => cb.dataset.facet === "category" && cb.dataset.slug === preselect);
+  const categoryParam = params.get("category");
+  if (categoryParam) {
+    const match = checkboxes.find((cb) => cb.dataset.facet === "category" && cb.dataset.slug === categoryParam);
+    if (match) match.checked = true;
+  }
+  const statusParam = params.get("status");
+  if (statusParam) {
+    const match = checkboxes.find((cb) => cb.dataset.facet === "status" && cb.dataset.value === statusParam);
     if (match) match.checked = true;
   }
 
