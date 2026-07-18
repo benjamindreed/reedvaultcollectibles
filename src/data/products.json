@@ -1,5 +1,33 @@
 [
   {
+    "id": "v1|307069932385|0",
+    "title": "2024 Topps Holiday - Paul Skenes #H165 Blue Metallic Glitter (RC)",
+    "price": 20,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Sports Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/D-kAAeSwDTBqWsMA/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/kJUAAeSwwvJqWsMT/s-l1600.jpg"
+    ],
+    "description": "The product is a 2024 Topps Holiday baseball trading card featuring Paul Skenes of the Pittsburgh Pirates. This particular card is part of the Blue Metallic Glitter parallel variety, making it a rare and unique addition to any collection. As a rookie card from the Topps manufacturer, it holds value for collectors looking for up-and-coming players in Major League Baseball. The card number is H165, representing the 165th card in the set for the 2024 season.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Baseball",
+      "League": "Major League Baseball (MLB)",
+      "Set": "2024 Topps Holiday",
+      "Parallel/Variety": "Blue Metallic Glitter",
+      "Manufacturer": "Topps",
+      "Team": "Pittsburgh Pirates",
+      "Player/Athlete": "Paul Skenes",
+      "Features": "Rookie, Base Set, Parallel/Variety",
+      "Card Number": "H165",
+      "Season": "2024"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307069932385",
+    "updatedAt": "2026-07-18T01:29:58.228Z"
+  },
+  {
     "id": "v1|306599018770|0",
     "title": "DC Batman Family \"Murder in the Night\" No. 481 January 1979 Vintage Comic",
     "price": 9,
@@ -20,7 +48,7 @@
       "Genre": "Family"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599018770",
-    "updatedAt": "2026-07-17T22:23:52.758Z"
+    "updatedAt": "2026-07-18T01:29:58.228Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -42,7 +70,39 @@
       "Publisher": "DC Comics"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599029479",
-    "updatedAt": "2026-07-17T22:23:52.751Z"
+    "updatedAt": "2026-07-18T01:29:58.228Z"
+  },
+  {
+    "id": "v1|307069944180|0",
+    "title": "Marvel Comics Special Edition #2 Star Wars The Empire Strikes Back Oversized",
+    "price": 15,
+    "currency": "USD",
+    "condition": "Acceptable",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/O48AAeSwaTJqWsYp/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/wZ4AAeSwJM5qWsYx/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/Z6QAAeSw8KJqWsZz/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/q1IAAeSw~oJqWsaF/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/zfcAAeSw0ttqWsaK/s-l1600.jpg"
+    ],
+    "description": "The product is a special edition comic book titled \"Marvel Comics Special Edition #2 Star Wars The Empire Strikes Back Oversized\" published by Marvel Comics in 1980. This single issue features characters and artwork related to the Star Wars universe, specifically focusing on the Empire Strikes Back storyline. With a focus on war and comics, this collectible item is part of the US Comics tradition and offers fans of the franchise a unique and larger-than-life edition to add to their collection.",
+    "specifics": {
+      "Publication Year": "1980",
+      "Type": "Comic Book",
+      "Format": "Single Issue",
+      "Issue Number": "2",
+      "Character": "Marvel",
+      "Tradition": "US Comics",
+      "Cover Artist": "star wars",
+      "Series Title": "Star Wars: the Empire Strikes Back",
+      "Universe": "Star Wars",
+      "Features": "Special Edition",
+      "Genre": "Comics, War",
+      "Publisher": "Marvel Comics"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307069944180",
+    "updatedAt": "2026-07-18T01:29:58.228Z"
   },
   {
     "id": "v1|306599041925|0",
@@ -69,6 +129,6 @@
       "Genre": "Superheroes"
     },
     "itemWebUrl": "https://www.ebay.com/itm/306599041925",
-    "updatedAt": "2026-07-17T22:23:52.758Z"
+    "updatedAt": "2026-07-18T01:29:58.228Z"
   }
 ]
