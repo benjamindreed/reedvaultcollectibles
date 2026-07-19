@@ -43,7 +43,7 @@
     "justIn": true,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.213Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -75,7 +75,7 @@
     "justIn": true,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.216Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -115,7 +115,7 @@
     "justIn": false,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.216Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -157,7 +157,7 @@
     "justIn": false,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.216Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -195,7 +195,7 @@
     "justIn": true,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.215Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -231,7 +231,49 @@
     "justIn": true,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.215Z"
+    "updatedAt": "2026-07-19T01:50:52.696Z"
+  },
+  {
+    "id": "v1|307071720486|0",
+    "title": "Terrance Marshall Jr 2021 prestige - NFL Passport Signatures",
+    "price": 19.99,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/KwIAAeSw-jdqW~66/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/zIAAAeSw529qW~66/s-l1600.jpg"
+    ],
+    "description": "The Terrance Marshall Jr 2021 prestige trading card is a sought-after collectible featuring an autograph from the rising NFL star. This card, part of the 2021 Panini Prestige set, showcases the player's signature on a standard card stock material. The autograph is authenticated by Panini Authentic and adds significant value to the card for fans of the Carolina Panthers and football enthusiasts alike. This original sports trading card captures a moment in the career of Terrance Marshall Jr, making it a desirable item for collectors looking to own a piece of football history.",
+    "specifics": {
+      "Card Size": "Standard",
+      "Autographed": "Yes",
+      "League": "National Football League (NFL)",
+      "Set": "2021 Panini Prestige",
+      "Autograph Format": "Label or Sticker",
+      "Player/Athlete": "Terrace Marshall Jr, Terrance Marshall Jr",
+      "Material": "Card Stock",
+      "Year Manufactured": "2021",
+      "Insert Set": "Nfl Passport Signatures",
+      "Original/Licensed Reprint": "Original",
+      "Event/Tournament": "Super Bowl",
+      "Vintage": "No",
+      "Type": "Sports Trading Card",
+      "Sport": "Football",
+      "Parallel/Variety": "Signatures",
+      "Language": "English",
+      "Autograph Authentication": "Panini Authentic",
+      "Manufacturer": "Panini",
+      "Features": "Rookie",
+      "Team": "Carolina Panthers",
+      "Season": "2021"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307071720486",
+    "createdAt": "2026-07-18T22:33:28.000Z",
+    "justIn": true,
+    "lastOne": true,
+    "grail": false,
+    "updatedAt": "2026-07-19T01:50:52.696Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -275,6 +317,6 @@
     "justIn": true,
     "lastOne": true,
     "grail": false,
-    "updatedAt": "2026-07-18T22:34:32.215Z"
+    "updatedAt": "2026-07-19T01:50:52.695Z"
   }
 ]
