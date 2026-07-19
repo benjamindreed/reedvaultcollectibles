@@ -6,9 +6,10 @@ interface Props {
   product: Product;
   priority?: boolean;
   graded?: "Graded" | "Ungraded";
+  rarity?: string[];
 }
 
-const { product, priority = false, graded } = Astro.props;
+const { product, priority = false, graded, rarity } = Astro.props;
 const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
 const band = CATEGORY_BAND[product.category];
 const icon = CATEGORY_ICON[product.category];
@@ -22,6 +23,7 @@ const chip = chipOf(product);
   data-category={product.category}
   data-graded={graded}
   data-status={chip?.label ?? "Available"}
+  data-rarity={rarity?.join(",")}
   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
 >
   <div class="band" style={`background:${band.bg};color:${band.fg}`}>

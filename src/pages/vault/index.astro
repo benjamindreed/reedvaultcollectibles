@@ -27,6 +27,42 @@ function statusOf(product: Product): string {
   return chipOf(product)?.label ?? "Available";
 }
 
+// Rarity signals, each sourced from real eBay data — never fabricated.
+const NUMBERED_PATTERN = /\b\d{1,4}\s?\/\s?\d{1,4}\b/;
+const NUMBERED_KEY_MARKS = /print run|numbered to|serial number/i;
+const FIRST_EDITION_MARKS = /\bfirst\s*(print|edition)\b|\b1st\s*(print|edition)\b/i;
+
+function isSignature(product: Product): boolean {
+  if (product.specifics["Autographed"] === "Yes") return true;
+  if (product.specifics["Signed"] === "Yes") return true;
+  return /\bauto(graph(ed)?)?\b/i.test(product.title);
+}
+
+function isNumbered(product: Product): boolean {
+  if (NUMBERED_KEY_MARKS.test(Object.keys(product.specifics).join(" "))) return true;
+  const haystack = [product.title, ...Object.values(product.specifics)].join(" ");
+  return NUMBERED_PATTERN.test(haystack);
+}
+
+function isFirstEdition(product: Product): boolean {
+  const haystack = [product.title, ...Object.values(product.specifics)].join(" ");
+  return FIRST_EDITION_MARKS.test(haystack);
+}
+
+function rarityOf(product: Product): string[] {
+  const tags: string[] = [];
+  if (isSignature(product)) tags.push("Signature");
+  if (isNumbered(product)) tags.push("Numbered");
+  if (isFirstEdition(product)) tags.push("First edition");
+  return tags;
+}
+
+const RARITY_ORDER = ["Signature", "Numbered", "First edition"];
+const rarityCounts = RARITY_ORDER.map((value) => ({
+  value,
+  count: products.filter((p) => rarityOf(p).includes(value)).length,
+}));
+
 const CATEGORY_ORDER: Category[] = ["Comics", "Trading Cards", "Memorabilia"];
 const categoryCounts = CATEGORY_ORDER.map((category) => ({
   value: category,
@@ -49,6 +85,7 @@ const rows = products.map((p) => ({
   product: p,
   graded: (isGraded(p) ? "Graded" : "Ungraded") as "Graded" | "Ungraded",
   status: statusOf(p),
+  rarity: rarityOf(p),
 }));
 
 // Raw eBay item-specifics (Publisher, Era, Grade, etc.) — a long, variable list, so it's
@@ -85,6 +122,19 @@ const specificsFacets = buildFacets(products);
             <button type="button" id="view-list" class="view-btn" aria-label="List view">☰</button>
           </div>
         </div>
+
+        <fieldset class="facet" data-facet-group="rarity">
+          <legend>Rarity</legend>
+          {
+            rarityCounts.map(({ value, count }) => (
+              <label>
+                <input type="checkbox" data-facet="rarity" data-value={value} />
+                <span>{value}</span>
+                <span class="fcount">{count}</span>
+              </label>
+            ))
+          }
+        </fieldset>
 
         <fieldset class="facet" data-facet-group="category">
           <legend>Category</legend>
@@ -156,12 +206,16 @@ const specificsFacets = buildFacets(products);
         <p id="result-count" class="result-count">{products.length} items</p>
 
         <div class="grid" id="inv-grid">
-          {rows.map(({ product, graded }, i) => <ProductCard product={product} graded={graded} priority={i < 8} />)}
+          {
+            rows.map(({ product, graded, rarity }, i) => (
+              <ProductCard product={product} graded={graded} rarity={rarity} priority={i < 8} />
+            ))
+          }
         </div>
 
         <div class="list" id="inv-list" hidden>
           {
-            rows.map(({ product, graded, status }) => {
+            rows.map(({ product, graded, status, rarity }) => {
               const band = CATEGORY_BAND[product.category];
               const icon = CATEGORY_ICON[product.category];
               const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
@@ -172,6 +226,7 @@ const specificsFacets = buildFacets(products);
                   data-category={product.category}
                   data-graded={graded}
                   data-status={status}
+                  data-rarity={rarity.join(",")}
                   data-specifics={JSON.stringify(product.specifics)}
                   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
                 >
@@ -557,6 +612,11 @@ const specificsFacets = buildFacets(products);
         const fieldName = key.slice("specifics:".length);
         const fieldValue = specifics[fieldName];
         if (!fieldValue || !values.has(fieldValue)) return false;
+        continue;
+      }
+      if (key === "rarity") {
+        const tags = (el.dataset.rarity ?? "").split(",").filter(Boolean);
+        if (!tags.some((tag) => values.has(tag))) return false;
         continue;
       }
       let fieldValue: string | undefined;

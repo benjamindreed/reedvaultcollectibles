@@ -130,7 +130,7 @@ const slideCount = 3;
   <button class="arrow prev" id="car-prev" aria-label="Previous slide">‹</button>
   <button class="arrow next" id="car-next" aria-label="Next slide">›</button>
   <div class="dots" id="car-dots">
-    {Array.from({ length: slideCount }).map((_, i) => <button class={`dot ${i === 0 ? "on" : ""}`} data-i={i} aria-label={`Slide ${i + 1}`} />)}
+    {Array.from({ length: slideCount }).map((_, i) => <button class={`car-dot ${i === 0 ? "on" : ""}`} data-i={i} aria-label={`Slide ${i + 1}`} />)}
   </div>
 </section>
 
@@ -432,7 +432,7 @@ const slideCount = 3;
     gap: 0.4rem;
   }
 
-  .dot {
+  .car-dot {
     width: 8px;
     height: 8px;
     border-radius: 4px;
@@ -442,7 +442,7 @@ const slideCount = 3;
     transition: width var(--dur) var(--ease), background var(--dur) var(--ease);
   }
 
-  .dot.on {
+  .car-dot.on {
     width: 24px;
     background: var(--reed-red);
   }
@@ -469,7 +469,7 @@ const slideCount = 3;
 
 <script>
   const track = document.getElementById("car-track") as HTMLElement;
-  const dots = Array.from(document.querySelectorAll<HTMLButtonElement>("#car-dots .dot"));
+  const dots = Array.from(document.querySelectorAll<HTMLButtonElement>("#car-dots .car-dot"));
   const slideCount = track.children.length;
   let index = 0;
   let timer: ReturnType<typeof setInterval> | null = null;
