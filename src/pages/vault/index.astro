@@ -123,19 +123,6 @@ const specificsFacets = buildFacets(products);
           </div>
         </div>
 
-        <fieldset class="facet" data-facet-group="rarity">
-          <legend>Rarity</legend>
-          {
-            rarityCounts.map(({ value, count }) => (
-              <label>
-                <input type="checkbox" data-facet="rarity" data-value={value} />
-                <span>{value}</span>
-                <span class="fcount">{count}</span>
-              </label>
-            ))
-          }
-        </fieldset>
-
         <fieldset class="facet" data-facet-group="category">
           <legend>Category</legend>
           {
@@ -176,6 +163,19 @@ const specificsFacets = buildFacets(products);
             </fieldset>
           )
         }
+
+        <fieldset class="facet" data-facet-group="rarity">
+          <legend>Rarity</legend>
+          {
+            rarityCounts.map(({ value, count }) => (
+              <label>
+                <input type="checkbox" data-facet="rarity" data-value={value} />
+                <span>{value}</span>
+                <span class="fcount">{count}</span>
+              </label>
+            ))
+          }
+        </fieldset>
 
         {
           specificsFacets.length > 0 && (
