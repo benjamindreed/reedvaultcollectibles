@@ -1,5 +1,5 @@
 ---
-import { resizeImage, formatPrice, itemPath, CATEGORY_BAND, CATEGORY_ICON, chipOf } from "../lib/products";
+import { resizeImage, formatPrice, itemPath, CATEGORY_BAND, CATEGORY_ICON, chipOf, statusesOf } from "../lib/products";
 import type { Product } from "../lib/products";
 
 interface Props {
@@ -22,7 +22,7 @@ const chip = chipOf(product);
   data-specifics={JSON.stringify(product.specifics)}
   data-category={product.category}
   data-graded={graded}
-  data-status={chip?.label ?? "Available"}
+  data-status={statusesOf(product).join(",")}
   data-rarity={rarity?.join(",")}
   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
 >

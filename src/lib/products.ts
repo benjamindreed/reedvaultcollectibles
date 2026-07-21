@@ -57,6 +57,17 @@ export function chipOf(product: Pick<Product, "grail" | "justIn">): Chip | null 
   return null;
 }
 
+/** All statuses that apply to a product, for filtering — not mutually exclusive like the
+ *  single card badge above. Sold items never appear in our data at all (they vanish from
+ *  eBay's search results entirely), so every product here is unsold and always gets
+ *  "Available" in addition to any Grail/Just-in tag it also has. */
+export function statusesOf(product: Pick<Product, "grail" | "justIn">): string[] {
+  const statuses = ["Available"];
+  if (product.grail) statuses.push("Grail");
+  if (product.justIn) statuses.push("Just in");
+  return statuses;
+}
+
 /** eBay CDN URLs encode size in the filename suffix (e.g. s-l225.jpg, s-l1600.jpg). */
 export function resizeImage(url: string, size: "s-l500" | "s-l1600"): string {
   return url.replace(/s-l\d+\.jpg$/i, `${size}.jpg`);

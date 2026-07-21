@@ -6,7 +6,7 @@ import {
   resizeImage,
   formatPrice,
   itemPath,
-  chipOf,
+  statusesOf,
   buildFacets,
   CATEGORY_BAND,
   CATEGORY_ICON,
@@ -21,10 +21,6 @@ const GRADE_MARKS = /\b(CGC|PSA|BGS|SGC)\b/i;
 function isGraded(product: Product): boolean {
   const haystack = [product.title, ...Object.values(product.specifics)].join(" ");
   return GRADE_MARKS.test(haystack);
-}
-
-function statusOf(product: Product): string {
-  return chipOf(product)?.label ?? "Available";
 }
 
 // Rarity signals, each sourced from real eBay data — never fabricated.
@@ -78,13 +74,13 @@ const gradingCounts = [
 const STATUS_ORDER = ["Grail", "Just in", "Available"];
 const statusCounts = STATUS_ORDER.map((value) => ({
   value,
-  count: products.filter((p) => statusOf(p) === value).length,
+  count: products.filter((p) => statusesOf(p).includes(value)).length,
 })).filter((s) => s.count > 0);
 
 const rows = products.map((p) => ({
   product: p,
   graded: (isGraded(p) ? "Graded" : "Ungraded") as "Graded" | "Ungraded",
-  status: statusOf(p),
+  statuses: statusesOf(p),
   rarity: rarityOf(p),
 }));
 
@@ -215,7 +211,7 @@ const specificsFacets = buildFacets(products);
 
         <div class="list" id="inv-list" hidden>
           {
-            rows.map(({ product, graded, status, rarity }) => {
+            rows.map(({ product, graded, statuses, rarity }) => {
               const band = CATEGORY_BAND[product.category];
               const icon = CATEGORY_ICON[product.category];
               const thumb = product.images[0] ? resizeImage(product.images[0], "s-l500") : null;
@@ -225,7 +221,7 @@ const specificsFacets = buildFacets(products);
                   href={itemPath(product.id)}
                   data-category={product.category}
                   data-graded={graded}
-                  data-status={status}
+                  data-status={statuses.join(",")}
                   data-rarity={rarity.join(",")}
                   data-specifics={JSON.stringify(product.specifics)}
                   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
@@ -614,15 +610,14 @@ const specificsFacets = buildFacets(products);
         if (!fieldValue || !values.has(fieldValue)) return false;
         continue;
       }
-      if (key === "rarity") {
-        const tags = (el.dataset.rarity ?? "").split(",").filter(Boolean);
+      if (key === "rarity" || key === "status") {
+        const tags = (key === "rarity" ? el.dataset.rarity : el.dataset.status)?.split(",").filter(Boolean) ?? [];
         if (!tags.some((tag) => values.has(tag))) return false;
         continue;
       }
       let fieldValue: string | undefined;
       if (key === "category") fieldValue = el.dataset.category;
       else if (key === "grading") fieldValue = el.dataset.graded;
-      else if (key === "status") fieldValue = el.dataset.status;
       if (!fieldValue || !values.has(fieldValue)) return false;
     }
     return true;
