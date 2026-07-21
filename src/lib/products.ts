@@ -13,7 +13,6 @@ export interface Product {
   itemWebUrl: string;
   createdAt: string | null;
   justIn: boolean;
-  lastOne: boolean;
   grail: boolean;
   updatedAt: string;
 }
@@ -48,10 +47,12 @@ export const CATEGORY_ICON: Record<Category, string> = {
 };
 
 /** A real, honest status signal only — every value here is sourced from eBay data,
- *  never inferred/fabricated. Priority: curated (Grail) > scarcity (Last one) > recency (Just in). */
-export function chipOf(product: Pick<Product, "grail" | "lastOne" | "justIn">): Chip | null {
+ *  never inferred/fabricated. Priority: curated (Grail) > recency (Just in).
+ *  ("Last one" was removed: nearly every listing here is a unique 1-of-1 item, so
+ *  estimatedAvailableQuantity === 1 was true for almost everything and never actually
+ *  differentiated anything — it just cluttered every card.) */
+export function chipOf(product: Pick<Product, "grail" | "justIn">): Chip | null {
   if (product.grail) return { label: "Grail", bg: "var(--foil-gold)", fg: "var(--ink)" };
-  if (product.lastOne) return { label: "Last one", bg: "var(--reed-red)", fg: "#ffffff" };
   if (product.justIn) return { label: "Just in", bg: "var(--bubblegum)", fg: "var(--ink)" };
   return null;
 }

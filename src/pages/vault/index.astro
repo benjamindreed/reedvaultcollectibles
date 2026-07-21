@@ -75,7 +75,7 @@ const gradingCounts = [
   { value: "Ungraded", count: products.filter((p) => !isGraded(p)).length },
 ];
 
-const STATUS_ORDER = ["Grail", "Last one", "Just in", "Available"];
+const STATUS_ORDER = ["Grail", "Just in", "Available"];
 const statusCounts = STATUS_ORDER.map((value) => ({
   value,
   count: products.filter((p) => statusOf(p) === value).length,

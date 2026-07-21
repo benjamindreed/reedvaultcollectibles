@@ -216,8 +216,6 @@ function normalizeItem(detail, storeCategoryNames) {
 
   const createdAt = detail.itemCreationDate ?? null;
   const justIn = createdAt !== null && Date.now() - new Date(createdAt).getTime() <= JUST_IN_WINDOW_MS;
-  const availableQty = detail.estimatedAvailabilities?.[0]?.estimatedAvailableQuantity ?? null;
-  const lastOne = availableQty === 1;
   const grail = storeCategoryNames.some((name) => /featured/i.test(name));
 
   return {
@@ -233,7 +231,6 @@ function normalizeItem(detail, storeCategoryNames) {
     itemWebUrl: detail.itemWebUrl,
     createdAt,
     justIn,
-    lastOne,
     grail,
     updatedAt: new Date().toISOString(),
   };
