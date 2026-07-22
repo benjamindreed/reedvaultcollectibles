@@ -28,7 +28,7 @@
     "createdAt": "2026-07-19T20:15:21.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -72,8 +72,8 @@
     "itemWebUrl": "https://www.ebay.com/itm/307071710017",
     "createdAt": "2026-07-18T22:30:00.000Z",
     "justIn": true,
-    "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "grail": true,
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -105,7 +105,7 @@
     "createdAt": "2026-07-19T19:55:28.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -138,8 +138,8 @@
     "itemWebUrl": "https://www.ebay.com/itm/307073665819",
     "createdAt": "2026-07-19T21:04:55.000Z",
     "justIn": true,
-    "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "grail": true,
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -175,8 +175,8 @@
     "itemWebUrl": "https://www.ebay.com/itm/307073703924",
     "createdAt": "2026-07-19T21:26:59.000Z",
     "justIn": true,
-    "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "grail": true,
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -208,7 +208,7 @@
     "createdAt": "2026-07-19T20:14:54.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -243,8 +243,8 @@
     "itemWebUrl": "https://www.ebay.com/itm/307074301263",
     "createdAt": "2026-07-20T05:34:24.000Z",
     "justIn": true,
-    "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "grail": true,
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -259,22 +259,30 @@
     ],
     "description": "The product is a highly sought-after 2024 Prizim Draft Picks Carson Beck Auto Red Flash trading card. This limited edition card features Carson Beck's autograph and is part of the Red Flash parallel variety, making it a rare and valuable collectible for sports trading card enthusiasts. With only 5 cards in existence, this one is sure to be a prized addition to any collection, especially for fans of Carson Beck and the 2024 season.",
     "specifics": {
+      "Autographed": "Yes",
+      "League": "National Collegiate Athletic Association (NCAA)",
+      "Set": "2024 Panini Prizm Draft Picks",
+      "Print Run": "5",
       "Player/Athlete": "Carson Beck",
-      "Season": "2024",
-      "Parallel/Variety": "Red Flash",
+      "Year Manufactured": "2024",
+      "Insert Set": "Draft Picks Autographs",
+      "Original/Licensed Reprint": "Original",
       "Type": "Sports Trading Card",
       "Sport": "Football",
-      "Autographed": "Yes",
-      "Print Run": "5",
+      "Parallel/Variety": "Red Flash",
+      "Card Name": "Carson Beck",
       "Autograph Authentication": "Professional Sports Authenticator (PSA)",
       "Manufacturer": "Panini",
-      "Card Number": "DPA-CBE"
+      "Professional Grader": "Professional Sports Authenticator (PSA)",
+      "Team": "Georgia Bulldogs",
+      "Card Number": "DPA-CBE",
+      "Season": "2024"
     },
     "itemWebUrl": "https://www.ebay.com/itm/307073659380",
     "createdAt": "2026-07-19T20:57:39.000Z",
     "justIn": true,
-    "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "grail": true,
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -305,7 +313,7 @@
     "createdAt": "2026-07-18T00:11:11.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.126Z"
+    "updatedAt": "2026-07-22T18:14:49.934Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -344,7 +352,7 @@
     "createdAt": "2025-11-13T00:33:47.000Z",
     "justIn": false,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -385,7 +393,7 @@
     "createdAt": "2025-11-13T00:40:37.000Z",
     "justIn": false,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -422,7 +430,7 @@
     "createdAt": "2026-07-18T21:34:21.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -457,7 +465,7 @@
     "createdAt": "2026-07-18T00:20:32.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -498,7 +506,7 @@
     "createdAt": "2026-07-18T22:33:28.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.943Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -541,6 +549,6 @@
     "createdAt": "2026-07-18T21:48:02.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T13:23:47.127Z"
+    "updatedAt": "2026-07-22T18:14:49.942Z"
   }
 ]

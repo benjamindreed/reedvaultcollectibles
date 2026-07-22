@@ -69,6 +69,33 @@ async function getAccessToken(clientId, clientSecret) {
   return data.access_token;
 }
 
+/**
+ * Exchanges the long-lived (~18mo) EBAY_REFRESH_TOKEN for a short-lived (~2h) user access
+ * token, used to authenticate Trading API calls (see getStoreCategoryIds). This is what
+ * makes Grail detection work unattended: the refresh token itself never touches the API,
+ * so there's nothing to manually refresh before each sync run.
+ */
+async function getUserAccessToken(clientId, clientSecret, refreshToken) {
+  const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+  const res = await fetchWithRetry("https://api.ebay.com/identity/v1/oauth2/token", {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${credentials}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
+      scope: "https://api.ebay.com/oauth/api_scope",
+    }).toString(),
+  });
+  const data = await res.json();
+  if (!data.access_token) {
+    throw new Error(`Refresh token exchange missing access_token: ${JSON.stringify(data)}`);
+  }
+  return data.access_token;
+}
+
 async function searchAllItemIds(token, seller) {
   const itemIds = [];
   let offset = 0;
@@ -115,14 +142,21 @@ async function fetchItemDetail(token, itemId) {
   return res.json();
 }
 
+// The "Featured" eBay Store Category, per its numeric ID (eBay's GetItem response only
+// ever returns StoreCategoryID/StoreCategory2ID -- never a name string -- so matching has
+// to be by ID, not by regex against category text). Overridable via env in case the store
+// category ever gets recreated with a different ID.
+const FEATURED_STORE_CATEGORY_ID = process.env.EBAY_FEATURED_CATEGORY_ID || "4259660619";
+
 /**
- * Store Category names (e.g. a seller-defined "Featured" category) aren't exposed by the
+ * Store Category IDs (e.g. a seller-defined "Featured" category) aren't exposed by the
  * public Browse API — only by the legacy Trading API, authenticated as the seller via a
- * User Access Token. This is optional enrichment: EBAY_USER_TOKEN may be absent (nothing
- * uses it yet) or may expire (~18mo, no auto-refresh) without breaking the core sync, so
- * failures here are logged and swallowed rather than aborting the whole run.
+ * short-lived user access token (minted from EBAY_REFRESH_TOKEN in main(), see
+ * getUserAccessToken). This is optional enrichment: a missing/expired/revoked refresh
+ * token just disables Grail detection without breaking the core sync, so failures here
+ * are logged and swallowed rather than aborting the whole run.
  */
-async function getStoreCategoryNames(userToken, legacyItemId) {
+async function getStoreCategoryIds(userToken, legacyItemId) {
   if (!userToken || !legacyItemId) return [];
 
   // OAuth user tokens authenticate to the Trading API via the X-EBAY-API-IAF-TOKEN header,
@@ -151,9 +185,9 @@ async function getStoreCategoryNames(userToken, legacyItemId) {
       const message = xml.match(/<LongMessage>([^<]*)<\/LongMessage>/)?.[1] ?? "unknown error";
       throw new Error(message);
     }
-    return [...xml.matchAll(/<StoreCategoryName>([^<]*)<\/StoreCategoryName>|<StoreCategory2Name>([^<]*)<\/StoreCategory2Name>/g)]
+    return [...xml.matchAll(/<StoreCategoryID>([^<]*)<\/StoreCategoryID>|<StoreCategory2ID>([^<]*)<\/StoreCategory2ID>/g)]
       .map((m) => m[1] || m[2])
-      .filter(Boolean);
+      .filter((id) => id && id !== "0");
   } catch (err) {
     console.error(`Store category lookup failed for item ${legacyItemId} (Grail detection skipped): ${err.message ?? err}`);
     return [];
@@ -203,7 +237,7 @@ function categorize(categoryPath) {
 
 const JUST_IN_WINDOW_MS = 45 * 24 * 60 * 60 * 1000;
 
-function normalizeItem(detail, storeCategoryNames) {
+function normalizeItem(detail, storeCategoryIds) {
   const images = [];
   if (detail.image?.imageUrl) images.push(detail.image.imageUrl);
   for (const extra of detail.additionalImages ?? []) {
@@ -219,7 +253,7 @@ function normalizeItem(detail, storeCategoryNames) {
 
   const createdAt = detail.itemCreationDate ?? null;
   const justIn = createdAt !== null && Date.now() - new Date(createdAt).getTime() <= JUST_IN_WINDOW_MS;
-  const grail = storeCategoryNames.some((name) => /featured/i.test(name));
+  const grail = storeCategoryIds.includes(FEATURED_STORE_CATEGORY_ID);
 
   return {
     id: detail.itemId,
@@ -243,10 +277,22 @@ async function main() {
   const clientId = requireEnv("EBAY_CLIENT_ID");
   const clientSecret = requireEnv("EBAY_CLIENT_SECRET");
   const seller = requireEnv("EBAY_SELLER");
-  const userToken = process.env.EBAY_USER_TOKEN || null;
+  const refreshToken = process.env.EBAY_REFRESH_TOKEN || null;
 
   console.log("Requesting OAuth token...");
   const token = await getAccessToken(clientId, clientSecret);
+
+  // Optional enrichment: mint a short-lived user access token from the long-lived refresh
+  // token once per run. Never blocks the core sync -- a missing/expired/revoked refresh
+  // token just disables Grail detection for this run, logged but non-fatal.
+  let userToken = null;
+  if (refreshToken) {
+    try {
+      userToken = await getUserAccessToken(clientId, clientSecret, refreshToken);
+    } catch (err) {
+      console.error(`Refresh token exchange failed (Grail detection disabled for this run): ${err.message ?? err}`);
+    }
+  }
 
   console.log(`Searching listings for seller "${seller}"...`);
   const itemIds = await searchAllItemIds(token, seller);
@@ -257,11 +303,11 @@ async function main() {
   );
   const results = await mapWithConcurrency(itemIds, DETAIL_CONCURRENCY, async (itemId) => {
     const detail = await fetchItemDetail(token, itemId);
-    const storeCategoryNames = await getStoreCategoryNames(userToken, detail.legacyItemId);
-    return { detail, storeCategoryNames };
+    const storeCategoryIds = await getStoreCategoryIds(userToken, detail.legacyItemId);
+    return { detail, storeCategoryIds };
   });
 
-  const products = results.map(({ detail, storeCategoryNames }) => normalizeItem(detail, storeCategoryNames));
+  const products = results.map(({ detail, storeCategoryIds }) => normalizeItem(detail, storeCategoryIds));
   products.sort((a, b) => a.title.localeCompare(b.title));
 
   if (products.length === 0) {
