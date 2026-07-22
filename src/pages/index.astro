@@ -4,12 +4,18 @@ import ProductCard from "../components/ProductCard.astro";
 import HeroCarousel from "../components/HeroCarousel.astro";
 import CategoryShortcuts from "../components/CategoryShortcuts.astro";
 import productsData from "../data/products.json";
-import type { Product } from "../lib/products";
+import type { Product, Category } from "../lib/products";
 
 const products = productsData as Product[];
-const fresh = [...products]
-  .sort((a, b) => new Date(b.createdAt ?? 0).getTime() - new Date(a.createdAt ?? 0).getTime())
-  .slice(0, 4);
+
+const CATEGORY_ORDER: Category[] = ["Comics", "Trading Cards", "Memorabilia"];
+const byRecency = (a: Product, b: Product) => new Date(b.createdAt ?? 0).getTime() - new Date(a.createdAt ?? 0).getTime();
+const fresh = CATEGORY_ORDER.flatMap((category) =>
+  products
+    .filter((p) => p.category === category)
+    .sort(byRecency)
+    .slice(0, 4),
+);
 
 const EBAY_SELLER = "reedvault";
 ---
