@@ -148,6 +148,9 @@ async function fetchItemDetail(token, itemId) {
 // category ever gets recreated with a different ID.
 const FEATURED_STORE_CATEGORY_ID = process.env.EBAY_FEATURED_CATEGORY_ID || "4259660619";
 
+// The "Sale" eBay Store Category, same ID-matching approach as Featured above.
+const SALE_STORE_CATEGORY_ID = process.env.EBAY_SALE_CATEGORY_ID || "4260127819";
+
 /**
  * Store Category IDs (e.g. a seller-defined "Featured" category) aren't exposed by the
  * public Browse API — only by the legacy Trading API, authenticated as the seller via a
@@ -254,6 +257,7 @@ function normalizeItem(detail, storeCategoryIds) {
   const createdAt = detail.itemCreationDate ?? null;
   const justIn = createdAt !== null && Date.now() - new Date(createdAt).getTime() <= JUST_IN_WINDOW_MS;
   const grail = storeCategoryIds.includes(FEATURED_STORE_CATEGORY_ID);
+  const sale = storeCategoryIds.includes(SALE_STORE_CATEGORY_ID);
 
   return {
     id: detail.itemId,
@@ -269,6 +273,7 @@ function normalizeItem(detail, storeCategoryIds) {
     createdAt,
     justIn,
     grail,
+    sale,
     updatedAt: new Date().toISOString(),
   };
 }

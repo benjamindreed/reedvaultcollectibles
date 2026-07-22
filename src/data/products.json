@@ -28,7 +28,8 @@
     "createdAt": "2026-07-19T20:15:21.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -73,7 +74,8 @@
     "createdAt": "2026-07-18T22:30:00.000Z",
     "justIn": true,
     "grail": true,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -105,7 +107,8 @@
     "createdAt": "2026-07-19T19:55:28.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -139,7 +142,8 @@
     "createdAt": "2026-07-19T21:04:55.000Z",
     "justIn": true,
     "grail": true,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -176,7 +180,8 @@
     "createdAt": "2026-07-19T21:26:59.000Z",
     "justIn": true,
     "grail": true,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -208,7 +213,8 @@
     "createdAt": "2026-07-19T20:14:54.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -244,7 +250,8 @@
     "createdAt": "2026-07-20T05:34:24.000Z",
     "justIn": true,
     "grail": true,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -282,7 +289,8 @@
     "createdAt": "2026-07-19T20:57:39.000Z",
     "justIn": true,
     "grail": true,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -313,7 +321,8 @@
     "createdAt": "2026-07-18T00:11:11.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.934Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.049Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -352,7 +361,8 @@
     "createdAt": "2025-11-13T00:33:47.000Z",
     "justIn": false,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": true,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -393,7 +403,8 @@
     "createdAt": "2025-11-13T00:40:37.000Z",
     "justIn": false,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -430,7 +441,8 @@
     "createdAt": "2026-07-18T21:34:21.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.053Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -465,7 +477,8 @@
     "createdAt": "2026-07-18T00:20:32.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -506,7 +519,8 @@
     "createdAt": "2026-07-18T22:33:28.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.943Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -549,6 +563,7 @@
     "createdAt": "2026-07-18T21:48:02.000Z",
     "justIn": true,
     "grail": false,
-    "updatedAt": "2026-07-22T18:14:49.942Z"
+    "sale": false,
+    "updatedAt": "2026-07-22T18:28:56.054Z"
   }
 ]

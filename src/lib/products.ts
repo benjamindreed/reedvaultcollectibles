@@ -14,6 +14,7 @@ export interface Product {
   createdAt: string | null;
   justIn: boolean;
   grail: boolean;
+  sale: boolean;
   updatedAt: string;
 }
 
@@ -47,11 +48,12 @@ export const CATEGORY_ICON: Record<Category, string> = {
 };
 
 /** A real, honest status signal only — every value here is sourced from eBay data,
- *  never inferred/fabricated. Priority: curated (Grail) > recency (Just in).
+ *  never inferred/fabricated. Priority: Sale (time-sensitive) > curated (Grail) > recency (Just in).
  *  ("Last one" was removed: nearly every listing here is a unique 1-of-1 item, so
  *  estimatedAvailableQuantity === 1 was true for almost everything and never actually
  *  differentiated anything — it just cluttered every card.) */
-export function chipOf(product: Pick<Product, "grail" | "justIn">): Chip | null {
+export function chipOf(product: Pick<Product, "grail" | "justIn" | "sale">): Chip | null {
+  if (product.sale) return { label: "Sale", bg: "var(--reed-red)", fg: "#ffffff" };
   if (product.grail) return { label: "Grail", bg: "var(--foil-gold)", fg: "var(--ink)" };
   if (product.justIn) return { label: "Just in", bg: "var(--bubblegum)", fg: "var(--ink)" };
   return null;
@@ -60,9 +62,10 @@ export function chipOf(product: Pick<Product, "grail" | "justIn">): Chip | null 
 /** All statuses that apply to a product, for filtering — not mutually exclusive like the
  *  single card badge above. Sold items never appear in our data at all (they vanish from
  *  eBay's search results entirely), so every product here is unsold and always gets
- *  "Available" in addition to any Grail/Just-in tag it also has. */
-export function statusesOf(product: Pick<Product, "grail" | "justIn">): string[] {
+ *  "Available" in addition to any Sale/Grail/Just-in tag it also has. */
+export function statusesOf(product: Pick<Product, "grail" | "justIn" | "sale">): string[] {
   const statuses = ["Available"];
+  if (product.sale) statuses.push("Sale");
   if (product.grail) statuses.push("Grail");
   if (product.justIn) statuses.push("Just in");
   return statuses;
