@@ -125,9 +125,11 @@ async function fetchItemDetail(token, itemId) {
 async function getStoreCategoryNames(userToken, legacyItemId) {
   if (!userToken || !legacyItemId) return [];
 
+  // OAuth user tokens authenticate to the Trading API via the X-EBAY-API-IAF-TOKEN header,
+  // not the legacy RequesterCredentials/eBayAuthToken XML field (that's for old Auth'n'Auth
+  // tokens only, and rejects OAuth tokens with a generic "Invalid IAF token" error).
   const body = `<?xml version="1.0" encoding="utf-8"?>
 <GetItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
-  <RequesterCredentials><eBayAuthToken>${userToken}</eBayAuthToken></RequesterCredentials>
   <ItemID>${legacyItemId}</ItemID>
   <DetailLevel>ReturnAll</DetailLevel>
 </GetItemRequest>`;
@@ -140,6 +142,7 @@ async function getStoreCategoryNames(userToken, legacyItemId) {
         "X-EBAY-API-SITEID": "0",
         "X-EBAY-API-COMPATIBILITY-LEVEL": "1193",
         "X-EBAY-API-CALL-NAME": "GetItem",
+        "X-EBAY-API-IAF-TOKEN": userToken,
       },
       body,
     });
