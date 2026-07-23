@@ -29,7 +29,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -75,7 +75,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -108,7 +108,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -143,7 +143,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -181,7 +181,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -214,7 +214,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -251,7 +251,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -290,7 +290,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -322,7 +322,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.595Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -362,7 +362,7 @@
     "justIn": false,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -404,7 +404,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -442,7 +442,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.595Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -478,7 +478,156 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
+  },
+  {
+    "id": "v1|307080312559|0",
+    "title": "Marvel Secret Wars II #3 (1985) Jim Shooter Al Milgrom Beyonder",
+    "price": 21.99,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/fwEAAeSw7CJqYYtr/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/iGwAAeSw6rFqYYtq/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/tTcAAeSwgUdqYYtu/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/3~0AAeSwYwRqYYtu/s-l1600.jpg"
+    ],
+    "description": "The product is a vintage comic book, Marvel Secret Wars II #3 from 1985, featuring the character Beyonder in a US Comics tradition. Written by Jim Shooter and with cover art by Al Milgrom, this single issue belongs to the Copper Age era of comic books. Published by Marvel Comics, this comic book falls under the genre of superheroes and is presented in color. It is a valuable collectible for fans of Marvel Comics and comic book collectors alike. Box number 1.3 IMR",
+    "specifics": {
+      "Unit of Sale": "Single Unit",
+      "Artist/Writer": "Jim Shooter",
+      "Character": "Beyonder",
+      "Tradition": "US Comics",
+      "Cover Artist": "Al Milgrom",
+      "Series Title": "Secret Wars II",
+      "Universe": "Marvel",
+      "Publisher": "Marvel Comics",
+      "Vintage": "Yes",
+      "Story Title": "Secret Wars II",
+      "Publication Year": "1985",
+      "Type": "Comic Book",
+      "Format": "Single Issue",
+      "Language": "English",
+      "Issue Number": "3",
+      "Era": "Copper Age (1984-1991)",
+      "Style": "Color",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307080312559",
+    "createdAt": "2026-07-23T03:33:40.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-07-23T08:14:08.596Z"
+  },
+  {
+    "id": "v1|307080301554|0",
+    "title": "Marvel Team-Up #142  VF  1984  Spider-man / Captain Marvel High Grade",
+    "price": 6.75,
+    "currency": "USD",
+    "condition": "Good",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/bHYAAeSwzk1qYYjF/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/VFEAAeSwlktqYYjE/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/CJgAAeSwzY5qYYjH/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/u8QAAeSw9ABqYYjI/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/93YAAeSwXLBqYYjN/s-l1600.jpg"
+    ],
+    "description": "The product is a high-grade copy of Marvel Team-Up #142 from 1984, featuring Spider-Man and Captain Marvel. This collectible comic book is part of the US Comics tradition and published by Marvel. With a grade of 8.0 Very Fine, this comic is a valuable addition to any comic book collection, especially for fans of Spider-Man and classic Marvel characters. Box number 1.2 IMR",
+    "specifics": {
+      "Series Title": "Spider-Man",
+      "Character": "Marvel Man",
+      "Publication Year": "1984",
+      "Tradition": "US Comics",
+      "Main Character": "Spider-Man",
+      "Grade": "8.0 Very Fine",
+      "Publisher": "Marvel"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307080301554",
+    "createdAt": "2026-07-23T03:22:54.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-07-23T08:14:08.596Z"
+  },
+  {
+    "id": "v1|307080234690|0",
+    "title": "Miracleman #2 (Eclipse Comics October 1985)",
+    "price": 7.5,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/znkAAeSw~oJqYXtY/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/YwMAAeSwBJdqYXtY/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/84kAAeSw68VqYXta/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/pAYAAeSw-o5qYXtb/s-l1600.jpg"
+    ],
+    "description": "The product is Miracleman #2, a comic book published by Eclipse Comics in October 1985. Written and illustrated by artists Alan Davis, Garry Leach, Ron Courtney, and Alan Moore, this issue features characters like Johnny Bates, Evelyn Cream, Liz Moran, and other characters in the superhero genre. The cover art is by Garry Leach, and the story takes place during the Copper Age of comics in the United States. With a mix of drama, superhero action, and personal struggles, this comic book is a must-have for fans of the genre. Box number 1.1 IMR",
+    "specifics": {
+      "Tradition": "US Comics",
+      "Publication Year": "1985",
+      "Artist/Writer": "Alan Davis, Garry Leach, Ron Courtney, Alan Moore",
+      "Language": "English",
+      "Character": "Johnny Bates, Evelyn Cream (Introduction), Evelyn Cream (Posing As Dr. Causley), Liz Moran, Darren's Mother, Evelyn Cream, Police Commissioner, Officer Duggan, Darren, Miracleman, John Bates, Wayne's Mother, Pete (Daily Record Features Editor), Liz Moran (Reveals to Mike That She Is Pregnant with Miracleman's Baby), Kid Miracleman (As A Catatonic 13-Year-Old, Terrorized in His Mind by an Adult Kid Miracleman), Sir Dennis Archer (Also in Flashback to October 12, 1963), Steve Cambridge (Death, Murdered by Evelyn Cream), Wayne, John Bates (Villain, Reverts to His 13-Year-Old Self, Johnny Bates), Stephanie (Death), Miracleman (Hand Only), Julie, Sir Dennis Archer (Introduction), John Bates (Villain), Mike Moran",
+      "Issue Number": "2",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Garry Leach",
+      "Series Title": "Miracleman",
+      "Publisher": "Eclipse Comics",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307080234690",
+    "createdAt": "2026-07-23T02:28:08.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-07-23T08:14:08.596Z"
+  },
+  {
+    "id": "v1|307080315805|0",
+    "title": "Secret Wars II 6 Marvel 1985 Beyonder Living Tribunal Mephisto Cosmic",
+    "price": 4.8,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/kjgAAeSwJxlqYYwr/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/bXQAAeSwvTxqYYwr/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/GDAAAeSwKXdqYYwu/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/G8gAAeSwS0BqYYwu/s-l1600.jpg"
+    ],
+    "description": "The product is a vintage comic book titled \"Secret Wars II #6\" published by Marvel Comics in 1985. The comic features a variety of characters such as She-Hulk, Doctor Doom, Captain America, and Beyonder. It falls under the genre of superheroes and is part of the US Comics tradition. The cover art is done by Al Milgrom and Steve Leialoha, with the interior art and writing by various artists and writers including Jim Shooter and Al Milgrom. This single issue comic is a valuable collectible for fans of superhero comics from the Copper Age. Box number 1.4 IMR",
+    "specifics": {
+      "Type": "Comic Book",
+      "Format": "Single Issue",
+      "Tradition": "US Comics",
+      "Signed": "No",
+      "Personalized": "No",
+      "Style": "Color",
+      "Inscribed": "No",
+      "Country of Origin": "United States",
+      "Vintage": "Yes",
+      "Publication Year": "1985",
+      "Artist/Writer": "? [As Minny Hands], Jim Shooter, Al Milgrom, Steve Leialoha",
+      "Language": "English",
+      "Character": "She-Hulk (cameo), Doctor Doom (cameo flashback), Captain America, Uatu, Ord Zyonz, Master Order, Tandy Bowen (cameo), Molecule Man (also in flashback), Watchers, Johnny Storm (flashback), Victor Von Doom (cameo flashback), Marsha Rosenberg, The Gardener, Tyrone Johnson (cameo), Thor (Cameo), Thor Odinson (cameo), The Watcher, Algrim, Susan Storm Richards (flashback), Thor Odinson, Mr. McCorkle, Katie Power, Cloak (cameo), Volcana, Gee, The In-Betweener, Jack Power, Mister Fantastic, Jennifer Walters, Beyonder (also in flashback), Owen Reece, Julie Power, Beyonder, Mass Master, Captain America (Steve Rogers), Stephen Strange (flashback), Invisible Girl (flashback), The Living Tribunal, Death, Dagger, The Thing (flashback), Lord Chaos, Human Torch (flashback), Franklin Richards, Reed Richards, Mephisto, Kurse (cameo in video), Thor, Kofi Whitemane, Tyrone Johnson, Cloak, Doctor Strange (flashback), Dave (journalist), Dagger (cameo), Mr. Fantastic (also in flashback), Energizer, EON, Lightspeed, Eternity, Beta Ray Bill (cameo in video), She-Hulk, Tandy Bowen, Ben Grimm (flashback), Celestial, Alex Power",
+      "Issue Number": "6",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Al Milgrom, Steve Leialoha",
+      "Series Title": "Secret Wars II",
+      "Features": "Direct",
+      "Publisher": "Marvel Comics",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307080315805",
+    "createdAt": "2026-07-23T03:36:50.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -520,7 +669,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.981Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -564,6 +713,38 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-07-23T01:57:12.980Z"
+    "updatedAt": "2026-07-23T08:14:08.596Z"
+  },
+  {
+    "id": "v1|307080322128|0",
+    "title": "Vintage 1979 DC Batman Family \"Murder in the Night\" No. 481 January Comic Book",
+    "price": 10.5,
+    "currency": "USD",
+    "condition": "Good",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/6eUAAeSwN09qYY0R/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/06QAAeSwygVqYY0R/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/AHwAAeSw4VVqYY0T/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/0dEAAeSw86VqYY0T/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/lugAAeSwfThqYY0U/s-l1600.jpg"
+    ],
+    "description": "The Vintage 1979 DC Batman Family \"Murder in the Night\" No. 481 January Comic Book is a sought-after collectible piece for comic book enthusiasts. Featuring the iconic character of Bat-Man, this comic book is a part of the US Comics tradition published by DC Comics. The January issue showcases a family-friendly genre within the Batman series, making it a valuable addition to any comic book collection. With its origin in the United States, this vintage comic book offers a glimpse into the world of Batman from 1979, capturing a moment in time for fans to cherish and reminisce about. Box number 1.5 IMR",
+    "specifics": {
+      "Series Title": "Batman: Family",
+      "Character": "Bat-Man",
+      "Genre": "Family",
+      "Publication Year": "1979",
+      "Type": "Comic Book",
+      "Tradition": "US Comics",
+      "Publisher": "DC Comics",
+      "Country of Origin": "United States"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307080322128",
+    "createdAt": "2026-07-23T03:40:38.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-07-23T08:14:08.596Z"
   }
 ]
