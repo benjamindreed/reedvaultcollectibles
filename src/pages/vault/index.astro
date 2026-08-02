@@ -223,6 +223,7 @@ const specificsFacets = buildFacets(products);
                   data-graded={graded}
                   data-status={statuses.join(",")}
                   data-rarity={rarity.join(",")}
+                  data-created={product.createdAt ?? ""}
                   data-specifics={JSON.stringify(product.specifics)}
                   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
                 >
@@ -646,19 +647,21 @@ const specificsFacets = buildFacets(products);
     return Number(el.querySelector(".price, .list-price")?.textContent?.replace(/[^0-9.]/g, "") || 0);
   }
 
+  function createdAtOf(el: HTMLElement): number {
+    const value = el.dataset.created;
+    return value ? new Date(value).getTime() : 0;
+  }
+
   function applySort() {
     const mode = sortSelect.value;
     const cmp = (a: HTMLElement, b: HTMLElement) => {
       if (mode === "price-asc") return priceOf(a) - priceOf(b);
       if (mode === "price-desc") return priceOf(b) - priceOf(a);
-      return 0; // "new"/"old" already reflect build-time order; static site has no live timestamps to re-sort by.
+      if (mode === "old") return createdAtOf(a) - createdAtOf(b);
+      return createdAtOf(b) - createdAtOf(a); // "new" (default)
     };
     const sortedGrid = [...gridCards].sort(cmp);
     const sortedList = [...listRows].sort(cmp);
-    if (mode === "old") {
-      sortedGrid.reverse();
-      sortedList.reverse();
-    }
     sortedGrid.forEach((el) => gridEl.appendChild(el));
     sortedList.forEach((el) => listEl.appendChild(el));
   }
@@ -687,5 +690,6 @@ const specificsFacets = buildFacets(products);
 
   drawerToggle?.addEventListener("click", () => sideEl?.classList.toggle("open"));
 
+  applySort();
   applyFilters();
 </script>

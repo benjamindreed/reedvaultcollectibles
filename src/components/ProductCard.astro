@@ -24,6 +24,7 @@ const chip = chipOf(product);
   data-graded={graded}
   data-status={statusesOf(product).join(",")}
   data-rarity={rarity?.join(",")}
+  data-created={product.createdAt ?? ""}
   data-search={`${product.title} ${product.category} ${product.condition ?? ""}`.toLowerCase()}
 >
   <div class="band" style={`background:${band.bg};color:${band.fg}`}>
