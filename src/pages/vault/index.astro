@@ -17,10 +17,12 @@ import {
 
 const products = productsData as Product[];
 
-const GRADE_MARKS = /\b(CGC|PSA|BGS|SGC)\b/i;
+// eBay's own condition field already says "Graded" directly -- more reliable than
+// regex-matching grading company names, which misses services like Beckett's BCCG
+// (doesn't match a "BGS" word boundary) and listings where eBay exposes no grader
+// name in specifics at all despite the condition being Graded.
 function isGraded(product: Product): boolean {
-  const haystack = [product.title, ...Object.values(product.specifics)].join(" ");
-  return GRADE_MARKS.test(haystack);
+  return product.condition === "Graded";
 }
 
 // Rarity signals, each sourced from real eBay data — never fabricated.
