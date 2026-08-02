@@ -151,6 +151,11 @@ const FEATURED_STORE_CATEGORY_ID = process.env.EBAY_FEATURED_CATEGORY_ID || "425
 // The "Sale" eBay Store Category, same ID-matching approach as Featured above.
 const SALE_STORE_CATEGORY_ID = process.env.EBAY_SALE_CATEGORY_ID || "4260127819";
 
+// The "Memorabilia" eBay Store Category. Overrides the categoryPath-based guess in
+// categorize() below -- lets the seller manually route an item into Memorabilia (e.g. a
+// card-adjacent insert) even when eBay's own category taxonomy would suggest otherwise.
+const MEMORABILIA_STORE_CATEGORY_ID = process.env.EBAY_MEMORABILIA_CATEGORY_ID || "4259660519";
+
 /**
  * Store Category IDs (e.g. a seller-defined "Featured" category) aren't exposed by the
  * public Browse API — only by the legacy Trading API, authenticated as the seller via a
@@ -265,7 +270,7 @@ function normalizeItem(detail, storeCategoryIds) {
     price: Number(detail.price?.value),
     currency: detail.price?.currency ?? "USD",
     condition: detail.condition ?? null,
-    category: categorize(detail.categoryPath),
+    category: storeCategoryIds.includes(MEMORABILIA_STORE_CATEGORY_ID) ? "Memorabilia" : categorize(detail.categoryPath),
     images,
     description: stripHtml(detail.shortDescription ?? detail.description ?? ""),
     specifics,
