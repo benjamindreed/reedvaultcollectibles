@@ -29,7 +29,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -75,7 +75,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -108,7 +108,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -143,7 +143,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -181,7 +181,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -214,7 +214,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -251,7 +251,32 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
+  },
+  {
+    "id": "v1|307100425377|0",
+    "title": "2024 Panini Absolute Football KABOOM! Advent Calendar (Empty) Rome Odunze Kaboom",
+    "price": 15,
+    "currency": "USD",
+    "condition": "Used",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/mQYAAeSwvA9qblyp/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/QSgAAeSwKs5qblyp/s-l1600.jpg"
+    ],
+    "description": "The 2024 Panini Absolute Football KABOOM! Advent Calendar is a collectible sports sticker album empty of stickers, perfect for football fans looking to complete their set. Manufactured by Panini, this calendar features a Kaboom-themed design perfect for football enthusiasts. Each calendar is from the year 2024, making it a sought-after item for collectors of football stickers and memorabilia.",
+    "specifics": {
+      "Brand": "Panini",
+      "Year Manufactured": "2024",
+      "Sport": "Football",
+      "Type": "Display Stand"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307100425377",
+    "createdAt": "2026-08-01T20:56:15.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -290,7 +315,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -322,7 +347,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -362,7 +387,7 @@
     "justIn": false,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -404,7 +429,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -442,7 +467,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -478,7 +503,87 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
+  },
+  {
+    "id": "v1|307100433681|0",
+    "title": "Marvel Fanfare #15 (Marvel Comics July 1984)",
+    "price": 9,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/VQAAAeSwW0Zqbl-I/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/k0UAAeSwYexqbl-I/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/sbQAAeSw9h1qbl-I/s-l1600.jpg"
+    ],
+    "description": "The Marvel Fanfare #15 comic book, published by Marvel Comics in July 1984 during the Copper Age, features a variety of well-known characters such as Dr. Doom, Daredevil, and the Thing. With a mix of superheroes and humor/satire elements, this issue showcases the work of artists and writers like Ian Akin, Glynis Oliver, and Barry Windsor-Smith. The cover art by Windsor-Smith adds to the appeal of this collectible comic, making it a must-have for fans of classic US Comics.",
+    "specifics": {
+      "Tradition": "US Comics",
+      "Publication Year": "1984",
+      "Artist/Writer": "Ian Akin, Glynis Oliver, Brian Garvey, Roger Mckenzie, Barry Windsor-Smith, Al Milgrom, Jack Sparling",
+      "Language": "English",
+      "Character": "Human Torch (Guest), Ben Grimm (Featured), Ben Grimm, Daredevil (Matt Murdock) (Featured), Super Skrull (Cameo), The Thing (Featured), The Thing, Cerebus (Cameo) (As A Balloon), H.E.R.B.I.E. (Cameo), Victor Von Doom (Cameo), Daredevil (Featured), Johnny Storm (Guest), Kl'rt (Cameo), Daredevil (Matt Murdock), Dr. Doom (Cameo)",
+      "Issue Number": "15",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Barry Windsor-Smith",
+      "Series Title": "Marvel Fanfare",
+      "Publisher": "Marvel Comics",
+      "Genre": "Superheroes, Humor/Satire"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307100433681",
+    "createdAt": "2026-08-01T21:06:37.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-02T01:09:36.445Z"
+  },
+  {
+    "id": "v1|307100664231|0",
+    "title": "Marvel Nightcrawler Comic 1985 Entire Series (#1-4)",
+    "price": 25,
+    "currency": "USD",
+    "condition": "Very Good",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/2vEAAeSw-DtqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/PQUAAeSwflRqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/OBwAAeSwxMpqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/~eAAAeSw6JVqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/x5UAAeSwSwhqbovV/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/4sEAAeSwwzRqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/vGQAAeSw75ZqbovV/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/LYsAAeSw-~pqbovU/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/BF0AAeSwnN9qbovV/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/EcoAAeSwqmpqbovV/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/kS0AAeSwfRBqbovV/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/nWEAAeSwzmFqbovW/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/Oj8AAeSwl-1qbovX/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/l48AAeSwhQNqbovX/s-l1600.jpg"
+    ],
+    "description": "The Marvel Nightcrawler comic series from 1985 features the iconic character Nightcrawler, created by artist Dave Cockrum. This vintage comic book set includes issues #1-4, set in the Marvel Universe and published by Marvel Comics. As part of the X-Men superhero team, this comic series falls under the superhero genre and is a must-have for fans of US Comics and the MCU. This comic lot is a valuable addition to any collector's library, especially for those interested in the early days of the X-Men franchise. BDR Box 1.1",
+    "specifics": {
+      "Unit of Sale": "Comic Book Lot",
+      "Artist/Writer": "Dave Cockrum",
+      "Character": "Nightcrawler",
+      "Tradition": "US Comics",
+      "Series Title": "Nightcrawler",
+      "Universe": "Marvel (MCU)",
+      "Publisher": "Marvel Comics",
+      "Inscribed": "No",
+      "Vintage": "Yes",
+      "Publication Year": "1985",
+      "Superhero Team": "X-Men",
+      "Personalized": "No",
+      "Genre": "Superheroes",
+      "Unit Quantity": "1"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307100664231",
+    "createdAt": "2026-08-02T00:25:08.000Z",
+    "justIn": true,
+    "grail": true,
+    "sale": false,
+    "updatedAt": "2026-08-02T01:09:36.444Z"
   },
   {
     "id": "v1|307080312559|0",
@@ -519,7 +624,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.493Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307080301554|0",
@@ -566,7 +671,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307080234690|0",
@@ -600,7 +705,46 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
+  },
+  {
+    "id": "v1|307100632779|0",
+    "title": "Nightcrawler #2 (Marvel Comics December 1985)",
+    "price": 9,
+    "currency": "USD",
+    "condition": "Very Good",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/qEkAAeSwUXxqboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/90oAAeSwuzZqboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/yRYAAeSwhINqboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/yRMAAeSwhINqboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/-yQAAeSwAQ9qboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/NU4AAeSwR-dqboj~/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/HgQAAeSwWEBqboj~/s-l1600.jpg"
+    ],
+    "description": "The product is a comic book titled Nightcrawler #2, released by Marvel Comics in December 1985. Written and illustrated by Dave and Paty Cockrum, this issue features a range of characters including Kurt Wagner, Kitty Pryde, Shagreen, and others from the Marvel Universe. Set during the Copper Age, this comic falls under the genre of superheroes and is part of the Nightcrawler series. With a direct edition cover by Dave Cockrum, this collectible item is a must-have for fans of US Comics and comic book enthusiasts. BDR Box 1.1",
+    "specifics": {
+      "Tradition": "US Comics",
+      "Unit Quantity": "8",
+      "Publication Year": "1985",
+      "Artist/Writer": "Dave Cockrum, Paty Cockrum",
+      "Language": "English",
+      "Character": "Long John Mcgurk (Earth-5311), Kurt Wagner, Bamf (Cameo), Kitty Pryde, Shagreen, Slimey (Earth-5311), Sharmond (Earth-5311), Shadow Cat, Illyana Rasputina, Spikenose (Earth-5311), Boggies (Earth-5311), Shagreen (Villain, Apparent Death), Blackknob (Introduction) (Earth-5311), Thorfan (Earth-5311), Nightcrawler, Lockheed, Jinjav Sabree",
+      "Issue Number": "2",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Dave Cockrum",
+      "Series Title": "Nightcrawler",
+      "Features": "Direct",
+      "Publisher": "Marvel Comics",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307100632779",
+    "createdAt": "2026-08-02T00:06:43.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307080315805|0",
@@ -643,7 +787,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -685,7 +829,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -729,7 +873,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.445Z"
   },
   {
     "id": "v1|307080322128|0",
@@ -774,6 +918,6 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-01T18:56:22.494Z"
+    "updatedAt": "2026-08-02T01:09:36.446Z"
   }
 ]
