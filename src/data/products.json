@@ -29,7 +29,39 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
+  },
+  {
+    "id": "v1|307113138963|0",
+    "title": "1983 Topps - Jim McMahon #33 (RC)",
+    "price": 6,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/JZ4AAeSwhP1qdhuL/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/IVkAAeSwT0pqdhuM/s-l1600.jpg"
+    ],
+    "description": "With its iconic design and association with the NFL, this card is a must-have for fans looking to add a piece of football history to their collection.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Football",
+      "League": "National Football League (NFL)",
+      "Set": "1983 Topps",
+      "Parallel/Variety": "[Base]",
+      "Manufacturer": "Topps",
+      "Team": "Chicago Bears",
+      "Player/Athlete": "Jim McMahon",
+      "Features": "Rookie, Base Set",
+      "Card Number": "33",
+      "Season": "1983"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113138963",
+    "createdAt": "2026-08-07T17:53:31.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307073588721|0",
@@ -61,7 +93,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -107,7 +139,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -140,7 +172,75 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
+  },
+  {
+    "id": "v1|307113174866|0",
+    "title": "2011 Topps Finest - Autograph Jumbo Relics Titus Young #AJR-TY /339 (AU, MEM,...",
+    "price": 12,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/fxYAAeSwFkJqdiMs/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/oL4AAeSwTrRqdiMs/s-l1600.jpg"
+    ],
+    "description": "With a limited print run of only 339, this card is a rare find for collectors looking for unique and limited-edition sports trading cards.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "League": "National Football League (NFL)",
+      "Sport": "Football",
+      "Set": "2011 Topps Finest",
+      "Parallel/Variety": "[Base]",
+      "Print Run": "339",
+      "Manufacturer": "Topps",
+      "Player/Athlete": "Titus Young",
+      "Team": "Detroit Lions",
+      "Features": "Rookie, Insert, Memorabilia, Serial Numbered",
+      "Card Number": "AJR-TY",
+      "Insert Set": "Autograph Jumbo Relics",
+      "Season": "2011"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113174866",
+    "createdAt": "2026-08-07T18:26:11.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.005Z"
+  },
+  {
+    "id": "v1|307113140923|0",
+    "title": "2017 Panini Certified Cuts - Legend Jerry Rice #101 /399",
+    "price": 5,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/UwcAAeSw5UJqdhwK/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/jlYAAeSwX0ZqdhwK/s-l1600.jpg"
+    ],
+    "description": "The 2017 Panini Certified Cuts trading card featuring NFL legend Jerry Rice is a highly sought-after collectible for football fans and trading card enthusiasts. This limited edition card, numbered #101 out of 399, is part of the base set for the 2017 Panini Certified Cuts collection.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Autograph Format": "Cut",
+      "League": "National Football League (NFL)",
+      "Sport": "Football",
+      "Set": "2017 Panini Certified Cuts",
+      "Parallel/Variety": "[Base]",
+      "Print Run": "399",
+      "Manufacturer": "Panini",
+      "Player/Athlete": "Jerry Rice",
+      "Team": "San Francisco 49ers",
+      "Features": "Serial Numbered, Base Set",
+      "Card Number": "101",
+      "Season": "2017"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113140923",
+    "createdAt": "2026-08-07T17:55:45.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -175,7 +275,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -213,7 +313,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -246,7 +346,41 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
+  },
+  {
+    "id": "v1|307113172226|0",
+    "title": "2023 Panini Absolute - War Room Materials Bijan Robinson #WR-BR /199 (MEM, RC)",
+    "price": 10,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/rSsAAeSwm6tqdiK7/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/dggAAeSwtEFqdiK7/s-l1600.jpg"
+    ],
+    "description": "With a limited print run of only 199, this card is sure to be a valuable addition to any football card collection. Produced by Panini, the card is serial numbered and part of the War Room Materials insert set, making it a sought-after piece for sports card enthusiasts.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Football",
+      "League": "National Football League (NFL)",
+      "Set": "2023 Panini Absolute",
+      "Parallel/Variety": "[Base]",
+      "Print Run": "199",
+      "Manufacturer": "Panini",
+      "Team": "Atlanta Falcons",
+      "Player/Athlete": "Bijan Robinson",
+      "Features": "Rookie, Insert, Memorabilia, Serial Numbered",
+      "Insert Set": "War Room Materials",
+      "Card Number": "WR-BR",
+      "Season": "2023"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113172226",
+    "createdAt": "2026-08-07T18:24:08.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -283,7 +417,74 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
+  },
+  {
+    "id": "v1|307113144270|0",
+    "title": "2023 Panini Legacy - Futures Patch Autographs Tank Dell #FAPS-21 Silver /249...",
+    "price": 15,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/aD4AAeSwtqtqdhzu/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/VRIAAeSwSJFqdhzu/s-l1600.jpg"
+    ],
+    "description": "This limited edition card is part of the Futures Patch Autographs insert set and is serial numbered to only 249 copies.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "League": "National Football League (NFL)",
+      "Sport": "Football",
+      "Set": "2023 Panini Legacy",
+      "Parallel/Variety": "Silver",
+      "Print Run": "249",
+      "Manufacturer": "Panini",
+      "Player/Athlete": "Tank Dell",
+      "Team": "Houston Texans",
+      "Features": "Rookie, Insert, Memorabilia, Serial Numbered, Parallel/Variety",
+      "Card Number": "FAPS-21",
+      "Insert Set": "Futures Patch Autographs",
+      "Season": "2023"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113144270",
+    "createdAt": "2026-08-07T17:59:24.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.005Z"
+  },
+  {
+    "id": "v1|307113166612|0",
+    "title": "2023 Panini Spectra Football Jaxon Smith Njigba #217 /60 Patch Auto",
+    "price": 250,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/xFUAAeSwyShqdiEl/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/mc4AAeSwYtBqdiEl/s-l1600.jpg"
+    ],
+    "description": "The 2023 Panini Spectra Football Jaxon Smith-Njigba #217 /60 Patch Auto trading card is a highly collectible item for football fans and trading card enthusiasts. This autographed card features a patch of the player's jersey, making it a unique and sought-after piece.",
+    "specifics": {
+      "Sport": "Football",
+      "Player/Athlete": "Jaxon Smith-Njigba",
+      "Manufacturer": "Panini",
+      "Season": "2023",
+      "Parallel/Variety": "Patch",
+      "Set": "2023 Panini Spectra",
+      "Card Number": "217",
+      "Type": "Sports Trading Card",
+      "Autographed": "Yes",
+      "League": "National Football League (NFL)",
+      "Features": "Rookie, Serial Numbered",
+      "Team": "Seattle Seahawks"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113166612",
+    "createdAt": "2026-08-07T18:17:25.000Z",
+    "justIn": true,
+    "grail": true,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307111834496|0",
@@ -316,7 +517,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.033Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307100425377|0",
@@ -341,7 +542,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -380,7 +581,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -412,7 +613,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.033Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307107381266|0",
@@ -453,7 +654,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -493,7 +694,7 @@
     "justIn": false,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -535,7 +736,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -573,7 +774,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307111629903|0",
@@ -606,7 +807,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307111581772|0",
@@ -639,7 +840,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307111620940|0",
@@ -672,7 +873,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.033Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307111611244|0",
@@ -705,7 +906,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -741,7 +942,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307107351190|0",
@@ -774,7 +975,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307100433681|0",
@@ -807,7 +1008,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307100664231|0",
@@ -854,7 +1055,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307080312559|0",
@@ -895,7 +1096,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307111556847|0",
@@ -926,7 +1127,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307080301554|0",
@@ -973,7 +1174,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307111632576|0",
@@ -998,7 +1199,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307080234690|0",
@@ -1032,7 +1233,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   },
   {
     "id": "v1|307100632779|0",
@@ -1071,7 +1272,36 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
+  },
+  {
+    "id": "v1|307113184318|0",
+    "title": "Panini Select 2013 Lesean Mccoy Philadelphia Eagles 5/10 Auto Patch Select stri",
+    "price": 100,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/kGoAAeSwFkJqdiT7/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/uDYAAeSwtqtqdiT7/s-l1600.jpg"
+    ],
+    "description": "The product is a 2013 Panini Select LeSean McCoy Philadelphia Eagles trading card featuring an autograph and patch. This card is part of the Select set for that season and showcases the player in his Eagles uniform.",
+    "specifics": {
+      "Sport": "Football",
+      "Player/Athlete": "LeSean McCoy",
+      "Manufacturer": "Panini",
+      "Season": "2013",
+      "Parallel/Variety": "Patch",
+      "Set": "2013 Panini Select",
+      "Team": "Philadelphia Eagles",
+      "Type": "Sports Trading Card"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307113184318",
+    "createdAt": "2026-08-07T18:33:45.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-07T18:41:34.004Z"
   },
   {
     "id": "v1|307080315805|0",
@@ -1114,7 +1344,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   },
   {
     "id": "v1|307111573696|0",
@@ -1144,7 +1374,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307111636222|0",
@@ -1195,7 +1425,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.005Z"
   },
   {
     "id": "v1|307107368664|0",
@@ -1245,7 +1475,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -1287,7 +1517,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307111627538|0",
@@ -1312,7 +1542,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -1356,7 +1586,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307107343193|0",
@@ -1403,7 +1633,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.034Z"
+    "updatedAt": "2026-08-07T18:41:34.006Z"
   },
   {
     "id": "v1|307080322128|0",
@@ -1448,6 +1678,6 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-07T12:42:13.035Z"
+    "updatedAt": "2026-08-07T18:41:34.007Z"
   }
 ]
