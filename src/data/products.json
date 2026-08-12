@@ -29,7 +29,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113138963|0",
@@ -61,7 +61,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307073588721|0",
@@ -93,7 +93,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -139,7 +139,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -172,7 +172,39 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
+  },
+  {
+    "id": "v1|307120972566|0",
+    "title": "1991 Topps - Darryl Strawberry #200 Operation Desert Shield",
+    "price": 30,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/G6gAAeSwbEhqe3zl/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/QFgAAeSwWUhqe3zl/s-l1600.jpg"
+    ],
+    "description": "It is a collectible item for Major League Baseball fans and collectors, showcasing a specific player in a unique design and with a specific card number within the set.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Baseball",
+      "League": "Major League Baseball (MLB)",
+      "Set": "1991 Topps",
+      "Parallel/Variety": "Operation Desert Shield",
+      "Manufacturer": "Topps",
+      "Team": "New York Mets",
+      "Player/Athlete": "Darryl Strawberry",
+      "Features": "Base Set, Parallel/Variety",
+      "Card Number": "200",
+      "Season": "1991"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120972566",
+    "createdAt": "2026-08-11T19:50:45.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.023Z"
   },
   {
     "id": "v1|307113197433|0",
@@ -206,7 +238,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113174866|0",
@@ -240,7 +272,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113140923|0",
@@ -274,7 +306,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -309,7 +341,73 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
+  },
+  {
+    "id": "v1|307120964844|0",
+    "title": "2020 Panini Chronicles - Score Update Rookies Justin Jefferson #449 Silver (RC)",
+    "price": 15,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/6wMAAeSwqhJqe3xS/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/NrUAAeSwli9qe3xS/s-l1600.jpg"
+    ],
+    "description": "The 2020 Panini Chronicles - Score Update Rookies Justin Jefferson #449 Silver (RC) trading card is a collectible item featuring the rookie player Justin Jefferson from the Minnesota Vikings. This specific card is part of the Score Update Rookies insert set, showcasing a parallel variety in silver.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Football",
+      "League": "National Football League (NFL)",
+      "Set": "2020 Panini Chronicles",
+      "Parallel/Variety": "Silver",
+      "Manufacturer": "Panini",
+      "Team": "Minnesota Vikings",
+      "Player/Athlete": "Justin Jefferson",
+      "Features": "Rookie, Insert, Parallel/Variety",
+      "Insert Set": "Score Update Rookies",
+      "Card Number": "449",
+      "Season": "2020"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120964844",
+    "createdAt": "2026-08-11T19:47:45.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.025Z"
+  },
+  {
+    "id": "v1|307120999625|0",
+    "title": "2022 Panini National Treasures Collegiate - College Materials Signatures Mataeo",
+    "price": 65,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/TU8AAeSwG~Vqe4AT/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/~xMAAeSwt99qe4AT/s-l1600.jpg"
+    ],
+    "description": "The 2022 Panini National Treasures Collegiate - College Materials Signatures Mataeo trading card is a highly sought-after collectible item in the sports trading card market. Featuring Mataeo Durant from the Duke Blue Devils, this card is part of a limited print run of only 39 copies, making it a rare and valuable addition to any collection.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "League": "National Collegiate Athletic Association (NCAA)",
+      "Sport": "Football",
+      "Set": "2022 Panini National Treasures Collegiate",
+      "Parallel/Variety": "Silver",
+      "Print Run": "39",
+      "Manufacturer": "Panini",
+      "Player/Athlete": "Mataeo Durant",
+      "Team": "Duke Blue Devils",
+      "Features": "Rookie, Memorabilia, Serial Numbered, Base Set, Parallel/Variety",
+      "Card Number": "55",
+      "Season": "2022"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120999625",
+    "createdAt": "2026-08-11T20:03:44.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -347,7 +445,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -380,7 +478,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113200626|0",
@@ -414,7 +512,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113172226|0",
@@ -448,7 +546,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -485,7 +583,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113144270|0",
@@ -519,7 +617,40 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.009Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
+  },
+  {
+    "id": "v1|307121002327|0",
+    "title": "2023 Panini Select Draft Picks - Field Level Stefon Diggs #154 Blue & White...",
+    "price": 5,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/3FwAAeSwF~xqe4CJ/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/1R0AAeSwIDhqe4CJ/s-l1600.jpg"
+    ],
+    "description": "The 2023 Panini Select Draft Picks Field Level Stefon Diggs #154 Blue & White trading card is a highly sought-after collectible for football fans. Manufactured by Panini, this serial numbered card features a limited print run of only 100, making it a valuable addition to any sports trading card collection.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "League": "National Collegiate Athletic Association (NCAA)",
+      "Sport": "Football",
+      "Set": "2023 Panini Select Draft Picks",
+      "Parallel/Variety": "Blue & White Squares Prizm",
+      "Print Run": "100",
+      "Manufacturer": "Panini",
+      "Player/Athlete": "Stefon Diggs",
+      "Team": "Maryland Terrapins",
+      "Features": "Serial Numbered, Base Set, Parallel/Variety",
+      "Card Number": "154",
+      "Season": "2023"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307121002327",
+    "createdAt": "2026-08-11T20:06:23.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113166612|0",
@@ -552,7 +683,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307111834496|0",
@@ -585,7 +716,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.009Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307100425377|0",
@@ -610,7 +741,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -649,7 +780,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -681,7 +812,40 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.009Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
+  },
+  {
+    "id": "v1|307120984329|0",
+    "title": "2024 Topps Signature Class - Fluidity Caleb Williams #F-1 (RC)",
+    "price": 40,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/cz4AAeSw~bxqe34W/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/TD4AAeSwU21qe34W/s-l1600.jpg"
+    ],
+    "description": "With its parallel variety and specific card number, F-1, this collectible item is a valuable addition to any football card collection.",
+    "specifics": {
+      "Type": "Sports Trading Card",
+      "Sport": "Football",
+      "League": "National Football League (NFL)",
+      "Set": "2024 Topps Signature Class",
+      "Parallel/Variety": "[Base]",
+      "Manufacturer": "Topps",
+      "Team": "Chicago Bears",
+      "Player/Athlete": "Caleb Williams",
+      "Features": "Rookie, Insert",
+      "Insert Set": "Fluidity",
+      "Card Number": "F-1",
+      "Season": "2024"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120984329",
+    "createdAt": "2026-08-11T19:55:34.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307107381266|0",
@@ -722,7 +886,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -762,7 +926,7 @@
     "justIn": false,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -804,7 +968,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -842,7 +1006,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307111629903|0",
@@ -875,7 +1039,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307111581772|0",
@@ -908,7 +1072,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111620940|0",
@@ -941,7 +1105,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.009Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307111611244|0",
@@ -974,7 +1138,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -1010,7 +1174,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307107351190|0",
@@ -1043,7 +1207,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113273804|0",
@@ -1080,7 +1244,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307100433681|0",
@@ -1113,7 +1277,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307100664231|0",
@@ -1160,7 +1324,7 @@
     "justIn": true,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307080312559|0",
@@ -1201,7 +1365,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111556847|0",
@@ -1232,7 +1396,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307080301554|0",
@@ -1279,7 +1443,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111632576|0",
@@ -1304,7 +1468,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307080234690|0",
@@ -1338,7 +1502,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307100632779|0",
@@ -1377,7 +1541,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113191897|0",
@@ -1402,7 +1566,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307113184318|0",
@@ -1431,7 +1595,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.009Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307113266899|0",
@@ -1469,7 +1633,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113302267|0",
@@ -1507,7 +1671,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307080315805|0",
@@ -1550,7 +1714,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111573696|0",
@@ -1580,7 +1744,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307113189327|0",
@@ -1606,7 +1770,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111636222|0",
@@ -1657,7 +1821,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307107368664|0",
@@ -1707,7 +1871,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -1749,7 +1913,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307111627538|0",
@@ -1774,7 +1938,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -1818,7 +1982,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113206849|0",
@@ -1844,7 +2008,62 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
+  },
+  {
+    "id": "v1|307120996847|0",
+    "title": "Topps Signature Marvin Harrison Junior Arizona Cardinals 2025 rookie #rcv-1 /225",
+    "price": 35,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/jD4AAeSwls1qe39L/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/VokAAeSwU21qe39L/s-l1600.jpg"
+    ],
+    "description": "With the card number 2025, this limited edition card is numbered #rcv-1 out of 225. Fans of the Arizona Cardinals and football enthusiasts alike will appreciate this special rookie card for their collection.",
+    "specifics": {
+      "Sport": "Football",
+      "Player/Athlete": "Marvin Harrison",
+      "Manufacturer": "Topps",
+      "Parallel/Variety": "Signatures",
+      "Features": "Rookie",
+      "Team": "Arizona Cardinals",
+      "Card Number": "2025",
+      "Type": "Sports Trading Card"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120996847",
+    "createdAt": "2026-08-11T20:00:25.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.024Z"
+  },
+  {
+    "id": "v1|307120978452|0",
+    "title": "Tots Tom Brady 2000 Draft Class Round Six Pick 33 New England #33 /250",
+    "price": 20,
+    "currency": "USD",
+    "condition": "Ungraded",
+    "category": "Trading Cards",
+    "images": [
+      "https://i.ebayimg.com/images/g/-HsAAeSwtH5qe32f/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/~p8AAeSw~cFqe32f/s-l1600.jpg"
+    ],
+    "description": "The product is a trading card featuring Tom Brady from his 2000 draft class. As a sixth-round pick, the card is numbered 33 out of 250, reflecting his position in the class.",
+    "specifics": {
+      "Sport": "Football",
+      "Player/Athlete": "Tom Brady",
+      "Season": "2000",
+      "Card Number": "33-250",
+      "Type": "Sports Trading Card"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307120978452",
+    "createdAt": "2026-08-11T19:53:44.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   },
   {
     "id": "v1|307107343193|0",
@@ -1891,7 +2110,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307080322128|0",
@@ -1936,7 +2155,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.011Z"
+    "updatedAt": "2026-08-12T01:10:10.025Z"
   },
   {
     "id": "v1|307113204344|0",
@@ -1961,6 +2180,6 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-08-11T18:49:45.010Z"
+    "updatedAt": "2026-08-12T01:10:10.024Z"
   }
 ]
