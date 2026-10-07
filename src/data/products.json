@@ -29,7 +29,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307174162269|0",
@@ -61,7 +61,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307157536108|0",
@@ -89,7 +89,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113138963|0",
@@ -121,7 +121,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307073588721|0",
@@ -153,7 +153,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307071710017|0",
@@ -198,7 +198,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307073564359|0",
@@ -231,7 +231,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307120972566|0",
@@ -262,7 +262,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307113197433|0",
@@ -296,7 +296,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307113174866|0",
@@ -311,26 +311,14 @@
     ],
     "description": "With a limited print run of only 339, this card is a rare find for collectors looking for unique and limited-edition sports trading cards.",
     "specifics": {
-      "Type": "Sports Trading Card",
-      "League": "National Football League (NFL)",
-      "Sport": "Football",
-      "Set": "2011 Topps Finest",
-      "Parallel/Variety": "[Base]",
-      "Print Run": "339",
-      "Manufacturer": "Topps",
-      "Player/Athlete": "Titus Young",
-      "Team": "Detroit Lions",
-      "Features": "Rookie, Insert, Memorabilia, Serial Numbered",
-      "Card Number": "AJR-TY",
-      "Insert Set": "Autograph Jumbo Relics",
-      "Season": "2011"
+      "Type": "Sports Trading Card"
     },
     "itemWebUrl": "https://www.ebay.com/itm/307113174866",
     "createdAt": "2026-08-07T18:26:11.000Z",
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113140923|0",
@@ -364,7 +352,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307073665819|0",
@@ -399,7 +387,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307120964844|0",
@@ -432,7 +420,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.118Z"
   },
   {
     "id": "v1|307120999625|0",
@@ -465,7 +453,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307073703924|0",
@@ -503,7 +491,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307073588365|0",
@@ -536,7 +524,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307113200626|0",
@@ -570,7 +558,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113172226|0",
@@ -604,7 +592,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307074301263|0",
@@ -641,7 +629,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307113144270|0",
@@ -675,7 +663,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307121002327|0",
@@ -708,7 +696,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.118Z"
   },
   {
     "id": "v1|307113166612|0",
@@ -741,7 +729,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307111834496|0",
@@ -774,7 +762,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307100425377|0",
@@ -799,7 +787,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307073659380|0",
@@ -838,7 +826,7 @@
     "justIn": false,
     "grail": true,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307069932385|0",
@@ -870,7 +858,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307107381266|0",
@@ -911,7 +899,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307151476706|0",
@@ -960,7 +948,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307149703468|0",
@@ -993,7 +981,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307149709918|0",
@@ -1025,39 +1013,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
-  },
-  {
-    "id": "v1|307151471514|0",
-    "title": "Batman #377 VF+ Hannigan Nocturna Jason Todd (Robin) Night-Slayer Lucius Fox",
-    "price": 18,
-    "currency": "USD",
-    "condition": "Like New",
-    "category": "Comics",
-    "images": [
-      "https://i.ebayimg.com/images/g/j9MAAeSw92lqkeS-/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/clwAAeSwhVlqkeS-/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/AW0AAeSwFLNqkeS-/s-l1600.jpg"
-    ],
-    "description": "The product is a Batman comic book issue #377 from 1984, featuring characters like Batman, Jason Todd (Robin), Nocturna, and Night-Slayer. Written by Jason, this comic falls under the superhero genre and is part of the US Comics tradition.",
-    "specifics": {
-      "Genre": "Superheroes",
-      "Artist/Writer": "Jason",
-      "Tradition": "US Comics",
-      "Language": "English",
-      "Publication Year": "1984",
-      "Character": "Batman, Jason Todd (Robin)",
-      "Era": "Copper Age (1984-1991)",
-      "Series Title": "Batman",
-      "Main Character": "Nocturna",
-      "Publisher": "DC"
-    },
-    "itemWebUrl": "https://www.ebay.com/itm/307151471514",
-    "createdAt": "2026-08-28T19:43:27.000Z",
-    "justIn": true,
-    "grail": false,
-    "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307167893401|0",
@@ -1089,7 +1045,39 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
+  },
+  {
+    "id": "v1|307151471514|0",
+    "title": "Batman #377 VF+ Hannigan Nocturna Jason Todd (Robin) Night-Slayer Lucius Fox",
+    "price": 18,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/j9MAAeSw92lqkeS-/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/clwAAeSwhVlqkeS-/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/AW0AAeSwFLNqkeS-/s-l1600.jpg"
+    ],
+    "description": "The product is a Batman comic book issue #377 from 1984, featuring characters like Batman, Jason Todd (Robin), Nocturna, and Night-Slayer. Written by Jason, this comic falls under the superhero genre and is part of the US Comics tradition.",
+    "specifics": {
+      "Genre": "Superheroes",
+      "Artist/Writer": "Jason",
+      "Tradition": "US Comics",
+      "Language": "English",
+      "Publication Year": "1984",
+      "Character": "Batman, Jason Todd (Robin)",
+      "Era": "Copper Age (1984-1991)",
+      "Series Title": "Batman",
+      "Main Character": "Nocturna",
+      "Publisher": "DC"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307151471514",
+    "createdAt": "2026-08-28T19:43:27.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307161267164|0",
@@ -1117,7 +1105,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307148240951|0",
@@ -1152,7 +1140,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307151477984|0",
@@ -1198,7 +1186,7 @@
     "justIn": true,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|306599018770|0",
@@ -1238,7 +1226,7 @@
     "justIn": false,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307149705584|0",
@@ -1270,7 +1258,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307148235112|0",
@@ -1310,7 +1298,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|306599029479|0",
@@ -1352,7 +1340,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307071619896|0",
@@ -1390,7 +1378,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.114Z"
   },
   {
     "id": "v1|307111629903|0",
@@ -1423,7 +1411,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307111581772|0",
@@ -1456,7 +1444,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.118Z"
   },
   {
     "id": "v1|307111620940|0",
@@ -1489,7 +1477,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307111611244|0",
@@ -1522,7 +1510,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307151482683|0",
@@ -1552,7 +1540,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307151480067|0",
@@ -1587,7 +1575,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307151484266|0",
@@ -1635,7 +1623,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307148242770|0",
@@ -1663,7 +1651,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307069944180|0",
@@ -1699,7 +1687,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307107351190|0",
@@ -1732,40 +1720,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
-  },
-  {
-    "id": "v1|307100433681|0",
-    "title": "Marvel Fanfare #15 (Marvel Comics July 1984)",
-    "price": 9,
-    "currency": "USD",
-    "condition": "Like New",
-    "category": "Comics",
-    "images": [
-      "https://i.ebayimg.com/images/g/VQAAAeSwW0Zqbl-I/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/k0UAAeSwYexqbl-I/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/sbQAAeSw9h1qbl-I/s-l1600.jpg"
-    ],
-    "description": "The Marvel Fanfare #15 comic book, published by Marvel Comics in July 1984 during the Copper Age, features a variety of well-known characters such as Dr. Doom, Daredevil, and the Thing. With a mix of superheroes and humor/satire elements, this issue showcases the work of artists and writers like Ian Akin, Glynis Oliver, and Barry Windsor-Smith. The cover art by Windsor-Smith adds to the appeal of this collectible comic, making it a must-have for fans of classic US Comics.",
-    "specifics": {
-      "Tradition": "US Comics",
-      "Publication Year": "1984",
-      "Artist/Writer": "Ian Akin, Glynis Oliver, Brian Garvey, Roger Mckenzie, Barry Windsor-Smith, Al Milgrom, Jack Sparling",
-      "Language": "English",
-      "Character": "Human Torch (Guest), Ben Grimm (Featured), Ben Grimm, Daredevil (Matt Murdock) (Featured), Super Skrull (Cameo), The Thing (Featured), The Thing, Cerebus (Cameo) (As A Balloon), H.E.R.B.I.E. (Cameo), Victor Von Doom (Cameo), Daredevil (Featured), Johnny Storm (Guest), Kl'rt (Cameo), Daredevil (Matt Murdock), Dr. Doom (Cameo)",
-      "Issue Number": "15",
-      "Era": "Copper Age (1984-1991)",
-      "Cover Artist": "Barry Windsor-Smith",
-      "Series Title": "Marvel Fanfare",
-      "Publisher": "Marvel Comics",
-      "Genre": "Superheroes, Humor/Satire"
-    },
-    "itemWebUrl": "https://www.ebay.com/itm/307100433681",
-    "createdAt": "2026-08-01T21:06:37.000Z",
-    "justIn": false,
-    "grail": false,
-    "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113273804|0",
@@ -1802,7 +1757,40 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
+  },
+  {
+    "id": "v1|307100433681|0",
+    "title": "Marvel Fanfare #15 (Marvel Comics July 1984)",
+    "price": 9,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/VQAAAeSwW0Zqbl-I/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/k0UAAeSwYexqbl-I/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/sbQAAeSw9h1qbl-I/s-l1600.jpg"
+    ],
+    "description": "The Marvel Fanfare #15 comic book, published by Marvel Comics in July 1984 during the Copper Age, features a variety of well-known characters such as Dr. Doom, Daredevil, and the Thing. With a mix of superheroes and humor/satire elements, this issue showcases the work of artists and writers like Ian Akin, Glynis Oliver, and Barry Windsor-Smith. The cover art by Windsor-Smith adds to the appeal of this collectible comic, making it a must-have for fans of classic US Comics.",
+    "specifics": {
+      "Tradition": "US Comics",
+      "Publication Year": "1984",
+      "Artist/Writer": "Ian Akin, Glynis Oliver, Brian Garvey, Roger Mckenzie, Barry Windsor-Smith, Al Milgrom, Jack Sparling",
+      "Language": "English",
+      "Character": "Human Torch (Guest), Ben Grimm (Featured), Ben Grimm, Daredevil (Matt Murdock) (Featured), Super Skrull (Cameo), The Thing (Featured), The Thing, Cerebus (Cameo) (As A Balloon), H.E.R.B.I.E. (Cameo), Victor Von Doom (Cameo), Daredevil (Featured), Johnny Storm (Guest), Kl'rt (Cameo), Daredevil (Matt Murdock), Dr. Doom (Cameo)",
+      "Issue Number": "15",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Barry Windsor-Smith",
+      "Series Title": "Marvel Fanfare",
+      "Publisher": "Marvel Comics",
+      "Genre": "Superheroes, Humor/Satire"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307100433681",
+    "createdAt": "2026-08-01T21:06:37.000Z",
+    "justIn": false,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307149701568|0",
@@ -1830,7 +1818,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307080312559|0",
@@ -1871,7 +1859,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307111556847|0",
@@ -1902,7 +1890,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307157545513|0",
@@ -1942,7 +1930,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307157512049|0",
@@ -1982,7 +1970,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307157549176|0",
@@ -2020,7 +2008,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307080301554|0",
@@ -2067,7 +2055,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307080234690|0",
@@ -2101,7 +2089,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307163280138|0",
@@ -2136,7 +2124,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307100632779|0",
@@ -2175,7 +2163,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113191897|0",
@@ -2200,7 +2188,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307157499651|0",
@@ -2234,7 +2222,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307159202193|0",
@@ -2269,7 +2257,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307148234632|0",
@@ -2307,7 +2295,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.118Z"
   },
   {
     "id": "v1|307159239362|0",
@@ -2342,42 +2330,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
-  },
-  {
-    "id": "v1|307157532966|0",
-    "title": "Secret Wars II #5 (Marvel Comics November 1985)",
-    "price": 7,
-    "currency": "USD",
-    "condition": "Like New",
-    "category": "Comics",
-    "images": [
-      "https://i.ebayimg.com/images/g/0QQAAeSwo8JqlyXz/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/p5MAAeSw0HxqlyXz/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/laIAAeSwE~FqlyXz/s-l1600.jpg"
-    ],
-    "description": "The product is Secret Wars II #5, a comic book published by Marvel Comics in November 1985 during the Copper Age. The cover artwork was done by Al Milgrom and Steve Leialoha. With direct features and a focus on superheroes, this comic book is a collectible item for fans of the genre and era.",
-    "specifics": {
-      "Tradition": "US Comics",
-      "Unit Quantity": "5",
-      "Publication Year": "1985",
-      "Artist/Writer": "Joe Rubinstein, Jim Shooter, M. Hands, Al Milgrom, Steve Leialoha",
-      "Language": "English",
-      "Character": "Susan Storm Richards, Mockingbird, Janet van Dyne, Captain America, Kitty Pryde, Rogue, Tabitha Smith (introduction), The Thing, Bobbi Morse, Boom-Boom (introduction, also in flashback), Alison Blaire (flashback), Kurse (cameo), Invisible Woman, Thor Odinson, Iron Man (Tony Stark), Monica Rambeau, Roberto da Costa, Greer Nelson, Mister Fantastic, Jennifer Walters, Beyonder (also in flashback), Beyonder, Logan, Captain America (Steve Rogers), Rachel Summers, Sam Guthrie, Human Torch, Sunspot, Starfox, Kurt Wagner, Reed Richards, Simon Williams, Ben Grimm, Shadowcat, Rahne Sinclair, Dane Whitman, Warlock, Hercules, Dazzler (flashback), Thor, Eros, Captain Marvel, Wolverine (Logan), Wolfsbane, Stephen Strange, Clint Barton, Celestials, Cannonball, Johnny Storm, The Black Knight, Doctor Strange, Anna Marie, Piotr Rasputin, Colossus, Wasp, Tigra, Algrim (cameo), Boom Boom's parents (flashback), Nightcrawler, Wonder Man, She-Hulk, Hawkeye (Clint Barton)",
-      "Issue Number": "5",
-      "Era": "Copper Age (1984-1991)",
-      "Cover Artist": "Al Milgrom, Steve Leialoha",
-      "Series Title": "Secret Wars II",
-      "Features": "Direct",
-      "Publisher": "Marvel Comics",
-      "Genre": "Superheroes"
-    },
-    "itemWebUrl": "https://www.ebay.com/itm/307157532966",
-    "createdAt": "2026-09-01T19:23:05.000Z",
-    "justIn": true,
-    "grail": false,
-    "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113266899|0",
@@ -2415,29 +2368,29 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
-    "id": "v1|307157530952|0",
-    "title": "Secret Wars II #6 (Marvel Comics December 1985)",
-    "price": 4,
+    "id": "v1|307157532966|0",
+    "title": "Secret Wars II #5 (Marvel Comics November 1985)",
+    "price": 7,
     "currency": "USD",
     "condition": "Like New",
     "category": "Comics",
     "images": [
-      "https://i.ebayimg.com/images/g/nhwAAeSwHrZqlyV1/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/6lYAAeSwL3VqlyV1/s-l1600.jpg",
-      "https://i.ebayimg.com/images/g/PboAAeSwYQVqlyV1/s-l1600.jpg"
+      "https://i.ebayimg.com/images/g/0QQAAeSwo8JqlyXz/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/p5MAAeSw0HxqlyXz/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/laIAAeSwE~FqlyXz/s-l1600.jpg"
     ],
-    "description": "The Secret Wars II #6 comic book, published by Marvel Comics in December 1985 during the Copper Age, features a diverse cast of characters from the superhero universe.",
+    "description": "The product is Secret Wars II #5, a comic book published by Marvel Comics in November 1985 during the Copper Age. The cover artwork was done by Al Milgrom and Steve Leialoha. With direct features and a focus on superheroes, this comic book is a collectible item for fans of the genre and era.",
     "specifics": {
       "Tradition": "US Comics",
-      "Unit Quantity": "8",
+      "Unit Quantity": "5",
       "Publication Year": "1985",
-      "Artist/Writer": "? [As Minny Hands], Jim Shooter, Al Milgrom, Steve Leialoha",
+      "Artist/Writer": "Joe Rubinstein, Jim Shooter, M. Hands, Al Milgrom, Steve Leialoha",
       "Language": "English",
-      "Character": "She-Hulk (cameo), Doctor Doom (cameo flashback), Captain America, Uatu, Ord Zyonz, Master Order, Tandy Bowen (cameo), Molecule Man (also in flashback), Watchers, Johnny Storm (flashback), Victor Von Doom (cameo flashback), Marsha Rosenberg, The Gardener, Tyrone Johnson (cameo), Thor (Cameo), Thor Odinson (cameo), The Watcher, Algrim, Susan Storm Richards (flashback), Thor Odinson, Mr. McCorkle, Katie Power, Cloak (cameo), Volcana, Gee, The In-Betweener, Jack Power, Mister Fantastic, Jennifer Walters, Beyonder (also in flashback), Owen Reece, Julie Power, Beyonder, Mass Master, Captain America (Steve Rogers), Stephen Strange (flashback), Invisible Girl (flashback), The Living Tribunal, Death, Dagger, The Thing (flashback), Lord Chaos, Human Torch (flashback), Franklin Richards, Reed Richards, Mephisto, Kurse (cameo in video), Thor, Kofi Whitemane, Tyrone Johnson, Cloak, Doctor Strange (flashback), Dave (journalist), Dagger (cameo), Mr. Fantastic (also in flashback), Energizer, EON, Lightspeed, Eternity, Beta Ray Bill (cameo in video), She-Hulk, Tandy Bowen, Ben Grimm (flashback), Celestial, Alex Power",
-      "Issue Number": "6",
+      "Character": "Susan Storm Richards, Mockingbird, Janet van Dyne, Captain America, Kitty Pryde, Rogue, Tabitha Smith (introduction), The Thing, Bobbi Morse, Boom-Boom (introduction, also in flashback), Alison Blaire (flashback), Kurse (cameo), Invisible Woman, Thor Odinson, Iron Man (Tony Stark), Monica Rambeau, Roberto da Costa, Greer Nelson, Mister Fantastic, Jennifer Walters, Beyonder (also in flashback), Beyonder, Logan, Captain America (Steve Rogers), Rachel Summers, Sam Guthrie, Human Torch, Sunspot, Starfox, Kurt Wagner, Reed Richards, Simon Williams, Ben Grimm, Shadowcat, Rahne Sinclair, Dane Whitman, Warlock, Hercules, Dazzler (flashback), Thor, Eros, Captain Marvel, Wolverine (Logan), Wolfsbane, Stephen Strange, Clint Barton, Celestials, Cannonball, Johnny Storm, The Black Knight, Doctor Strange, Anna Marie, Piotr Rasputin, Colossus, Wasp, Tigra, Algrim (cameo), Boom Boom's parents (flashback), Nightcrawler, Wonder Man, She-Hulk, Hawkeye (Clint Barton)",
+      "Issue Number": "5",
       "Era": "Copper Age (1984-1991)",
       "Cover Artist": "Al Milgrom, Steve Leialoha",
       "Series Title": "Secret Wars II",
@@ -2445,12 +2398,12 @@
       "Publisher": "Marvel Comics",
       "Genre": "Superheroes"
     },
-    "itemWebUrl": "https://www.ebay.com/itm/307157530952",
-    "createdAt": "2026-09-01T19:21:05.000Z",
+    "itemWebUrl": "https://www.ebay.com/itm/307157532966",
+    "createdAt": "2026-09-01T19:23:05.000Z",
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307113302267|0",
@@ -2488,7 +2441,42 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
+  },
+  {
+    "id": "v1|307157530952|0",
+    "title": "Secret Wars II #6 (Marvel Comics December 1985)",
+    "price": 4,
+    "currency": "USD",
+    "condition": "Like New",
+    "category": "Comics",
+    "images": [
+      "https://i.ebayimg.com/images/g/nhwAAeSwHrZqlyV1/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/6lYAAeSwL3VqlyV1/s-l1600.jpg",
+      "https://i.ebayimg.com/images/g/PboAAeSwYQVqlyV1/s-l1600.jpg"
+    ],
+    "description": "The Secret Wars II #6 comic book, published by Marvel Comics in December 1985 during the Copper Age, features a diverse cast of characters from the superhero universe.",
+    "specifics": {
+      "Tradition": "US Comics",
+      "Unit Quantity": "8",
+      "Publication Year": "1985",
+      "Artist/Writer": "? [As Minny Hands], Jim Shooter, Al Milgrom, Steve Leialoha",
+      "Language": "English",
+      "Character": "She-Hulk (cameo), Doctor Doom (cameo flashback), Captain America, Uatu, Ord Zyonz, Master Order, Tandy Bowen (cameo), Molecule Man (also in flashback), Watchers, Johnny Storm (flashback), Victor Von Doom (cameo flashback), Marsha Rosenberg, The Gardener, Tyrone Johnson (cameo), Thor (Cameo), Thor Odinson (cameo), The Watcher, Algrim, Susan Storm Richards (flashback), Thor Odinson, Mr. McCorkle, Katie Power, Cloak (cameo), Volcana, Gee, The In-Betweener, Jack Power, Mister Fantastic, Jennifer Walters, Beyonder (also in flashback), Owen Reece, Julie Power, Beyonder, Mass Master, Captain America (Steve Rogers), Stephen Strange (flashback), Invisible Girl (flashback), The Living Tribunal, Death, Dagger, The Thing (flashback), Lord Chaos, Human Torch (flashback), Franklin Richards, Reed Richards, Mephisto, Kurse (cameo in video), Thor, Kofi Whitemane, Tyrone Johnson, Cloak, Doctor Strange (flashback), Dave (journalist), Dagger (cameo), Mr. Fantastic (also in flashback), Energizer, EON, Lightspeed, Eternity, Beta Ray Bill (cameo in video), She-Hulk, Tandy Bowen, Ben Grimm (flashback), Celestial, Alex Power",
+      "Issue Number": "6",
+      "Era": "Copper Age (1984-1991)",
+      "Cover Artist": "Al Milgrom, Steve Leialoha",
+      "Series Title": "Secret Wars II",
+      "Features": "Direct",
+      "Publisher": "Marvel Comics",
+      "Genre": "Superheroes"
+    },
+    "itemWebUrl": "https://www.ebay.com/itm/307157530952",
+    "createdAt": "2026-09-01T19:21:05.000Z",
+    "justIn": true,
+    "grail": false,
+    "sale": false,
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307080315805|0",
@@ -2531,7 +2519,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307111573696|0",
@@ -2561,7 +2549,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307113189327|0",
@@ -2587,7 +2575,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157547834|0",
@@ -2634,7 +2622,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307111636222|0",
@@ -2685,7 +2673,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157527130|0",
@@ -2720,7 +2708,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157536317|0",
@@ -2755,7 +2743,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307107368664|0",
@@ -2805,7 +2793,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307157524611|0",
@@ -2838,7 +2826,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157542533|0",
@@ -2871,7 +2859,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307148239020|0",
@@ -2906,7 +2894,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307149714337|0",
@@ -2947,7 +2935,7 @@
     "justIn": true,
     "grail": false,
     "sale": true,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307151488634|0",
@@ -2986,7 +2974,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307071720486|0",
@@ -3028,7 +3016,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307111627538|0",
@@ -3053,7 +3041,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307071640120|0",
@@ -3097,7 +3085,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307148231151|0",
@@ -3123,7 +3111,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.321Z"
+    "updatedAt": "2026-10-07T22:28:02.115Z"
   },
   {
     "id": "v1|307113206849|0",
@@ -3149,7 +3137,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.323Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307120996847|0",
@@ -3178,7 +3166,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307120978452|0",
@@ -3204,7 +3192,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307107343193|0",
@@ -3251,7 +3239,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307080322128|0",
@@ -3296,7 +3284,7 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157523303|0",
@@ -3327,7 +3315,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.117Z"
   },
   {
     "id": "v1|307157495438|0",
@@ -3356,7 +3344,7 @@
     "justIn": true,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   },
   {
     "id": "v1|307113204344|0",
@@ -3381,6 +3369,6 @@
     "justIn": false,
     "grail": false,
     "sale": false,
-    "updatedAt": "2026-10-07T12:21:47.322Z"
+    "updatedAt": "2026-10-07T22:28:02.116Z"
   }
 ]
